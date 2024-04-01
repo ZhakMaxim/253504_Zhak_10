@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43b9dbba-403a-474b-a4d6-eea9757910af" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/decorators.py" beforeDir="false" afterPath="$PROJECT_DIR$/decorators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inputfunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/inputfunctions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1.py" beforeDir="false" afterPath="$PROJECT_DIR$/task1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2.py" beforeDir="false" afterPath="$PROJECT_DIR$/task2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task3.py" beforeDir="false" afterPath="$PROJECT_DIR$/task3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task4.py" beforeDir="false" afterPath="$PROJECT_DIR$/task4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task5.py" beforeDir="false" afterPath="$PROJECT_DIR$/task5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/task1tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/task1tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/task2tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/task2tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/task3tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/task3tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/task4tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/task4tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/task5tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/task5tests.py" afterDir="false" />
-    </list>
+    <list default="true" id="43b9dbba-403a-474b-a4d6-eea9757910af" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,9 +16,6 @@
         <option value="Python Script" />
       </list>
     </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
