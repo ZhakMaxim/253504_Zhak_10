@@ -1,3 +1,5 @@
+"""Program for Lab3 - Default data types, collections, functions, modules. Version 1.0. Zhak M.V., date - 25.03.2024"""
+
 from task1 import task1
 from task2 import task2
 from task3 import task3

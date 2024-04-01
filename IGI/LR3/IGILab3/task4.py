@@ -6,9 +6,11 @@ string = "So she was considering in her own mind, as well as she could, for the 
          "the daisies, when suddenly a White Rabbit with pink eyes ran close by her."
 
 def calculateWordsDelimitedBySpaces():
+    """function for calculating words, delimited by spaces"""
     return string.count(' ') - string.count(',') - 1
 
 def calculateEveryLetterAmount(string_):
+    """function for calculating every letter amount in string"""
     string_ = string_.lower()
     letters = {}
     for i in string_:
@@ -20,13 +22,15 @@ def calculateEveryLetterAmount(string_):
     return letters
 
 def findAllPhrasesSeparatedByCommas():
+    """function for finding all phrases, separated by commas"""
     lst = []
     for i in string.split(','):
         lst.append(i)
-    return lst
+    return sorted(lst)
 
 @taskName
 def task4():
+    """function for performing forth task"""
     while True:
         choice = inputCheck("please, enter option from 1 to 3 or '0' to exit: ", TYPES.INT)
         match choice:

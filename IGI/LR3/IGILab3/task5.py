@@ -2,6 +2,7 @@ from inputfunctions import listInput
 from decorators import taskName
 
 def findMinPositiveElement(lst):
+    """function for finding the minimum positive element from list"""
     minElement = None
     for i in lst:
         if i > 0:
@@ -12,6 +13,7 @@ def findMinPositiveElement(lst):
     return minElement
 
 def calculateSumBetweenFirstAndLastPositiveElement(lst):
+    """function for calculating sum between firs and last positive element from list"""
     sum_ = 0
     lastPositiveIndex = 0
     for i in range(len(lst)):
@@ -26,6 +28,8 @@ def calculateSumBetweenFirstAndLastPositiveElement(lst):
 
 @taskName
 def task5():
+    """function for performing fifth task"""
     lst = listInput()
     print(f"min positive element: {findMinPositiveElement(lst)}")
     print(f"sum between first and last positive element: {calculateSumBetweenFirstAndLastPositiveElement(lst)}")
+    print(f"list: {lst}")

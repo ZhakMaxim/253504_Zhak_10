@@ -7,6 +7,7 @@ class TYPES(Enum):
 
 
 def inputCheck(string, type_):
+    """function for input check"""
     while True:
         match type_:
             case TYPES.INT:
@@ -24,6 +25,7 @@ def inputCheck(string, type_):
 
 
 def sequenceUserInput():
+    """function for user's sequence input"""
     lst = []
     print("please, enter sequence. Enter '0' for stop input")
     while True:
@@ -33,8 +35,8 @@ def sequenceUserInput():
         else:
             return lst
 
-
 def sequenceRandomInput():
+    """function for random sequence input"""
     lst = []
     size = random.randint(5, 101)
     for i in range(size):
@@ -43,6 +45,7 @@ def sequenceRandomInput():
     return lst
 
 def listInput():
+    """function for list input"""
     size = inputCheck("please, input list size: ", TYPES.INT)
     lst = []
     print("please, enter list elements")

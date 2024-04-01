@@ -4,6 +4,7 @@ from decorators import taskName
 
 
 def calculateSeries(x, eps):
+    """function for calculating sum of series with given accuracy"""
     seriesResult = 0.0
     for i in range(500):
         seriesResult += x**i
@@ -15,6 +16,7 @@ def calculateSeries(x, eps):
 
 @taskName
 def task1():
+    """function for performing first task"""
     while True:
         x = inputCheck('please, input x: ', TYPES.FLOAT)
         if fabs(x) >= 1:
