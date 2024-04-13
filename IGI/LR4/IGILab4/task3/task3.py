@@ -3,7 +3,7 @@ from inputfunctions import inputCheck, TYPES
 import matplotlib.pyplot as plt
 import numpy as np
 from statistics import median, mode
-
+from task import Task
 
 class SeriesPlotBuilder:
     def __init__(self, series, iterations):
@@ -68,7 +68,7 @@ class Series:
         return
 
 
-class Task3:
+class Task3(Task):
     @staticmethod
     def perform():
         """function for performing first task"""

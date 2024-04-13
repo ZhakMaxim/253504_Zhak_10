@@ -3,8 +3,31 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.spatial import ConvexHull
 from inputfunctions import *
+from task import Task
+
+class ResizableMixin:
+    _a: float
+    _h: float
+
+    def resize(self, a, h):
+        self._a = a
+        self._h = h
 
 class Shape(ABC):
+    def __init__(self, color, shape_name):
+        self._color = ShapeColor(color)
+        self._shape_name = shape_name
+
+    def getColor(self):
+        return self._color
+
+    color = property(getColor)
+
+    def getShapeName(self):
+        return self._shape_name
+
+    name = property(getShapeName)
+
     @abstractmethod
     def calculate_area(self):
         pass
@@ -18,13 +41,12 @@ class ShapeColor:
 
     color = property(getColor)
 
-class Triangle(Shape):
+class Triangle(Shape, ResizableMixin):
     def __init__(self, a, h, x, color, figure_name):
+        super().__init__(color, figure_name)
         self._a = a
         self._h = h
         self._x = x
-        self._color = ShapeColor(color)
-        self._figure_name = figure_name
 
     def getX(self):
         return self._x
@@ -41,19 +63,8 @@ class Triangle(Shape):
 
     h = property(getH)
 
-    def getColor(self):
-        return self._color
-
-    color = property(getColor)
-
-    def getName(self):
-        return self._figure_name
-
-    name = property(getName)
-
     def calculate_area(self):
         return 0.5 * self._a * self._h
-
 
     def print_attributes(self):
         print('rectangle base: {}, height: {}, color: {}, area: {}'.format(self._a, self._h, self._color.color,
@@ -90,7 +101,7 @@ class TriangleDrawer:
         plt.savefig(r'D:\PyCharm\PycharmProjects\IGILab4\task4\plots.png', dpi=300)
         plt.show()
 
-class Task4:
+class Task4(Task):
     @staticmethod
     def perform():
         a = inputCheck('please, enter the base of triangle: ', TYPES.FLOAT)
@@ -103,3 +114,15 @@ class Task4:
         triangle.print_attributes()
         triangleDrawer = TriangleDrawer(triangle)
         triangleDrawer.plot_triangle()
+
+        while True:
+            choice = input('please, enter 1 if you want to change base and height of triangle or '
+                           'something else if you want to quit: ')
+            if choice == '1':
+                a = inputCheck('please, enter the base of triangle: ', TYPES.FLOAT)
+                h = inputCheck('please, enter the height of triangle: ', TYPES.FLOAT)
+                triangle.resize(a, h)
+                triangleDrawer.plot_triangle()
+            else:
+                break
+

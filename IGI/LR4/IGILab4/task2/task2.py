@@ -1,5 +1,31 @@
 import re
 from inputfunctions import inputCheck, TYPES
+from zipfile import ZipFile
+from task import Task
+
+class FileZipper:
+    _zip_name = r'task2\case1.zip'
+    _filename = r'task2\case1.txt'
+
+    @property
+    def zip_name(self):
+        return self._zip_name
+
+    @zip_name.setter
+    def zip_name(self, zip_name):
+        self._zip_name = zip_name
+
+    @property
+    def filename(self):
+        return self._filename
+
+    @filename.setter
+    def filename(self, filename):
+        self._filename = filename
+
+    def zipFile(self):
+        with ZipFile(self._zip_name, 'w') as zf:
+            zf.write(self._filename)
 
 
 class TextLoader:
@@ -86,10 +112,12 @@ class TextHandler:
         words_list = re.findall(r'\w+', self._text)
         return [word for word in words_list if (words_list.index(word) + 1) % 2]
 
-class Task2:
+class Task2(Task):
     @staticmethod
     def perform():
         textHandler = TextHandler()
+        fileZipper = FileZipper()
+        zips = []
         while True:
             choice = inputCheck('Please, choose option:\n'
                                 '1: general task performing\n'
@@ -129,38 +157,83 @@ class Task2:
                     result += '\n' + str(textHandler.calculate_smiles_count())
 
                     textLoader.write_to_file(result, r'task2\case1.txt')
+                    fileZipper.zipFile()
+
+                    if r'task2\case1.zip' not in zips:
+                        zips.append(r'task2\case1.zip')
                 case 2:
                     string = input("please input string: ")
                     textHandler.text = string
                     result = textHandler.find_words_including_from_g_to_o()
                     print(result)
+
                     TextLoader.write_to_file(str(result), r'task2\case2.txt')
+                    fileZipper.zip_name = r'task2\case2.zip'
+                    fileZipper.filename = r'task2\case2.txt'
+                    fileZipper.zipFile()
+
+                    if r'task2\case2.zip' not in zips:
+                        zips.append(r'task2\case2.zip')
                 case 3:
                     email = input("please email address: ")
                     textHandler.text = email
                     result = textHandler.validate_email_address()
                     print(result)
+
                     TextLoader.write_to_file(str(result), r'task2\case3.txt')
+                    fileZipper.zip_name = r'task2\case3.zip'
+                    fileZipper.filename = r'task2\case3.txt'
+                    fileZipper.zipFile()
+
+                    if r'task2\case3.zip' not in zips:
+                        zips.append(r'task2\case3.zip')
                 case 4:
                     string = input("please input string: ")
                     textHandler.text = string
                     result = textHandler.calculate_count_of_words_in_string()
                     print(result)
+
                     TextLoader.write_to_file(str(result), r'task2\case4.txt')
+                    fileZipper.zip_name = r'task2\case4.zip'
+                    fileZipper.filename = r'task2\case4.txt'
+                    fileZipper.zipFile()
+
+                    if r'task2\case4.zip' not in zips:
+                        zips.append(r'task2\case4.zip')
                 case 5:
                     string = input("please input string: ")
                     textHandler.text = string
                     result = textHandler.find_longest_word_and_position()
                     print(result)
+
                     TextLoader.write_to_file(str(result), r'task2\case5.txt')
+                    fileZipper.zip_name = r'task2\case5.zip'
+                    fileZipper.filename = r'task2\case5.txt'
+                    fileZipper.zipFile()
+
+                    if r'task2\case5.zip' not in zips:
+                        zips.append(r'task2\case5.zip')
                 case 6:
                     string = input("please input string: ")
                     textHandler.text = string
                     result = textHandler.find_every_odd_word()
                     print(result)
+
                     TextLoader.write_to_file(str(result), r'task2\case6.txt')
+                    fileZipper.zip_name = r'task2\case6.zip'
+                    fileZipper.filename = r'task2\case6.txt'
+                    fileZipper.zipFile()
+
+                    if r'task2\case6.zip' not in zips:
+                        zips.append(r'task2\case6.zip')
                 case 0:
                     break
                 case _:
                     print('please choose from 0 to 6:')
                     continue
+
+        for zip_ in zips:
+            print(zip_ + ':')
+            with ZipFile(zip_, 'r') as zp:
+                for item in zp.infolist():
+                    print(f'filename: {item.filename}, date: {item.date_time}, size: {item.file_size}')

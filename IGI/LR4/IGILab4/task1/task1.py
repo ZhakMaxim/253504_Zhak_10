@@ -1,6 +1,7 @@
 import csv
 import pickle
 from inputfunctions import *
+from task import Task
 
 notebook = {'John': '123-456-789',
             'Victor': '111-222-333',
@@ -40,7 +41,7 @@ class CSVHandler:
 
 class NoteBookHandler:
     def __init__(self, note_book: dict):
-        self._notebook = notebook
+        self._notebook = note_book
 
     def find_note_by_first_letter(self, letter):
         for k, v in self._notebook.items():
@@ -54,7 +55,7 @@ class NoteBookHandler:
                 return k
         return 'nothing :('
 
-class Task1:
+class Task1(Task):
     @staticmethod
     def perform():
         global notebook

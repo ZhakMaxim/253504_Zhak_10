@@ -1,4 +1,3 @@
-"""Program for Lab4 - Default data types, collections, functions, modules. Version 1.0. Zhak M.V., date - 09.04.2024"""
 from task1.task1 import Task1
 from task2.task2 import Task2
 from task3.task3 import Task3

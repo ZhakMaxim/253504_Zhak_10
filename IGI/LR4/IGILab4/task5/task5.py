@@ -1,5 +1,5 @@
 import numpy as np
-
+from task import Task
 
 def calculate_mean_deviation(series):
     selective_average = sum(series) / len(series)
@@ -7,7 +7,7 @@ def calculate_mean_deviation(series):
     return np.sqrt(all_elements_squares_sum / len(series) - selective_average ** 2)
 
 
-class Task5:
+class Task5(Task):
     @staticmethod
     def perform():
         n = np.random.randint(2, 6)
