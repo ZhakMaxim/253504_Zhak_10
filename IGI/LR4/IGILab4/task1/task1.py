@@ -2,6 +2,7 @@ import csv
 import pickle
 from inputfunctions import *
 from task import Task
+from abc import ABC, abstractmethod
 
 notebook = {'John': '123-456-789',
             'Victor': '111-222-333',
@@ -10,9 +11,22 @@ notebook = {'John': '123-456-789',
             'Igor': '000-111-222'
             }
 
-class PickleHandler:
+class DataHandler(ABC):
     def __init__(self, filename):
         self._filename = filename
+
+    @abstractmethod
+    def serialize(self):
+        pass
+
+    @abstractmethod
+    def deserialize(self):
+        pass
+
+
+class PickleHandler(DataHandler):
+    def __init__(self, filename):
+        super().__init__(filename)
 
     def serialize(self):
         with open(self._filename, 'wb') as pd:
@@ -23,9 +37,10 @@ class PickleHandler:
             data = pickle.load(pd)
         return data
 
-class CSVHandler:
+
+class CSVHandler(DataHandler):
     def __init__(self, filename):
-        self._filename = filename
+        super().__init__(filename)
 
     def serialize(self):
         with open(self._filename, 'w', newline='') as cd:
@@ -39,6 +54,7 @@ class CSVHandler:
             data = dict(reader)
         return data
 
+
 class NoteBookHandler:
     def __init__(self, note_book: dict):
         self._notebook = note_book
@@ -47,17 +63,19 @@ class NoteBookHandler:
         for k, v in self._notebook.items():
             if k[0].lower() == letter.lower():
                 return k, v
-        return 'nothing :('
+        return 'nothing found :('
 
     def find_name_by_phone_number(self, phone_number):
         for k, v in self._notebook.items():
             if v == phone_number:
                 return k
-        return 'nothing :('
+        return 'nothing found :('
+
 
 class Task1(Task):
     @staticmethod
     def perform():
+        """function for performing first task"""
         global notebook
         notebook = dict(sorted(notebook.items()))
 
@@ -85,5 +103,5 @@ class Task1(Task):
                 case 0:
                     break
                 case _:
-                    print('please choose from 0 to 2:')
+                    print('please choose from 0 to 2!')
                     continue

@@ -91,7 +91,7 @@ class TriangleDrawer:
 
         plt.fill(dots[hull.vertices, 0], dots[hull.vertices, 1], self._triangle.color.color)
 
-        plt.axis('equal')
+
         plt.xlabel('x')
         plt.ylabel('y')
 
@@ -104,6 +104,7 @@ class TriangleDrawer:
 class Task4(Task):
     @staticmethod
     def perform():
+        """function for performing fourth task"""
         a = inputCheck('please, enter the base of triangle: ', TYPES.FLOAT)
         h = inputCheck('please, enter the height of triangle: ', TYPES.FLOAT)
         x = inputCheck('please, enter the angle: ', TYPES.INT)

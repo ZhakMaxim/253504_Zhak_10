@@ -31,17 +31,29 @@ class FileZipper:
 class TextLoader:
     @staticmethod
     def read_from_file(filename):
-        f = open(filename, 'r')
-        text = f.read()
-        f.close()
-        return text
+        f = None
+        try:
+            f = open(filename, 'r')
+            text = f.read()
+            return text
+        except Exception as e:
+            print('error while working with file:', e)
+        finally:
+            if f:
+                f.close()
+        return ''
 
     @staticmethod
     def write_to_file(text, filename):
-        f = open(filename, 'w')
-        f.write(text)
-        f.close()
-        return
+        f = None
+        try:
+            f = open(filename, 'w')
+            f.write(text)
+        except Exception as e:
+            print('error while working with file:', e)
+        finally:
+            if f:
+                f.close()
 
 
 class TextHandler:
@@ -57,25 +69,25 @@ class TextHandler:
         self._text = someText
 
     def count_sentences(self):
-        return self._text.count('.') + self._text.count('!') + self._text.count('?')
+        return self.count_declarative_sentences() + self.count_incentive_sentences() + \
+            self.count_interrogative_sentences()
 
     def count_declarative_sentences(self):
-        return self._text.count('.')
+        return len(re.findall(r'\.\W?', self._text))
 
     def count_interrogative_sentences(self):
-        return self._text.count('?')
+        return len(re.findall(r'\?\W?', self._text))
 
     def count_incentive_sentences(self):
-        return self._text.count('!')
+        return len(re.findall(r'!\W?', self._text))
 
     def calculate_sentence_average_length(self):
-        sentences_list = re.split(r'\. |\? |!', self._text)
-        sentences_list = sentences_list[:len(sentences_list) - 1:]
+        sentences_list = re.split(r'\.\W? |\?\W? |!\W?', self._text)
         word_list = [re.findall(r'\w+', sen) for sen in sentences_list]
         sum_ = 0
         for words in word_list:
             sum_ += sum(len(word) for word in words)
-        return sum_/(len(word_list))
+        return sum_/(len(sentences_list) - 1)
 
     def calculate_word_average_length(self):
         words_list = re.findall(r'\w+', self._text)
@@ -95,8 +107,8 @@ class TextHandler:
         return [matching_word for matching_word in matching_words if matching_word != []]
 
     def validate_email_address(self):
-        email_pattern = re.compile(r'\w+@[A-Za-z.]+')
-        emails = re.match(email_pattern, self._text)
+        email_pattern = re.compile(r'[a-zA-Z0-9]+@[a-zA-Z0-9]+\.?[a-zA-Z]+')
+        emails = re.fullmatch(email_pattern, self._text)
         return True if emails else False
 
     def calculate_count_of_words_in_string(self):
@@ -115,6 +127,7 @@ class TextHandler:
 class Task2(Task):
     @staticmethod
     def perform():
+        """function for performing second task"""
         textHandler = TextHandler()
         fileZipper = FileZipper()
         zips = []

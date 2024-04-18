@@ -10,6 +10,7 @@ def calculate_mean_deviation(series):
 class Task5(Task):
     @staticmethod
     def perform():
+        """function for performing fifth task"""
         n = np.random.randint(2, 6)
         m = np.random.randint(2, 6)
         matrix = np.random.randint(1, 10, (n, m))

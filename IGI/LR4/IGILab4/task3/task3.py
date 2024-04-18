@@ -1,3 +1,4 @@
+import statistics
 from math import fabs, sqrt
 from inputfunctions import inputCheck, TYPES
 import matplotlib.pyplot as plt
@@ -33,19 +34,10 @@ class SeriesPlotBuilder:
         plt.show()
 
 
-class SeriesAttributesCalculator:
-    @staticmethod
-    def calculate_dispersion(series):
-        selective_average = sum(series)/len(series)
-        all_elements_squares_sum = sum(i*i for i in series)
-        return all_elements_squares_sum/len(series) - selective_average**2
-
-
 class Series:
     def __init__(self, x, eps):
         self._x = x
         self._eps = eps
-        self._attribute_calculator = SeriesAttributesCalculator()
 
     def calculateSeries(self):
         """function for calculating sum of series with given accuracy"""
@@ -60,8 +52,8 @@ class Series:
                 print(f"average of series elements: {round(seriesResult/(i + 1), 10)}")
                 print(f"median : {median(series)}")
                 print(f"mode: {mode(series)}")
-                print(f"dispersion: {self._attribute_calculator.calculate_dispersion(series)}")
-                print(f"mean deviation: {sqrt(self._attribute_calculator.calculate_dispersion(series))}")
+                print(f"dispersion: {statistics.variance(series)}")
+                print(f"mean deviation: {statistics.stdev(series)}")
                 return series, i
 
         print("max count of iterations")
@@ -71,7 +63,7 @@ class Series:
 class Task3(Task):
     @staticmethod
     def perform():
-        """function for performing first task"""
+        """function for performing third task"""
         while True:
             x = inputCheck('please, input x: ', TYPES.FLOAT)
             if fabs(x) >= 1:
