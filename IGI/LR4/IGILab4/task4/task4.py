@@ -1,9 +1,9 @@
 from abc import ABC, abstractmethod
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.spatial import ConvexHull
 from inputfunctions import *
 from task import Task
+
 
 class ResizableMixin:
     _a: float
@@ -12,6 +12,7 @@ class ResizableMixin:
     def resize(self, a, h):
         self._a = a
         self._h = h
+
 
 class Shape(ABC):
     def __init__(self, color, shape_name):
@@ -32,6 +33,7 @@ class Shape(ABC):
     def calculate_area(self):
         pass
 
+
 class ShapeColor:
     def __init__(self, color):
         self._color = color
@@ -40,6 +42,7 @@ class ShapeColor:
         return self._color
 
     color = property(getColor)
+
 
 class Triangle(Shape, ResizableMixin):
     def __init__(self, a, h, x, color, figure_name):
@@ -69,6 +72,8 @@ class Triangle(Shape, ResizableMixin):
     def print_attributes(self):
         print('rectangle base: {}, height: {}, color: {}, area: {}'.format(self._a, self._h, self._color.color,
                                                                            self.calculate_area()))
+
+
 class TriangleDrawer:
     def __init__(self, triangle: Triangle):
         self._triangle = triangle
@@ -80,17 +85,11 @@ class TriangleDrawer:
         C = np.array([self._triangle.a, 0])
         B = np.array([1/np.tan(x_rad) * self._triangle.h, self._triangle.h])
 
-
         plt.plot([A[0], C[0]], [A[1], C[1]], color='black')
         plt.plot([A[0], B[0]], [A[1], B[1]], color='black')
         plt.plot([B[0], C[0]], [B[1], C[1]], color='black')
 
-        dots = np.array([A, B, C])
-
-        hull = ConvexHull(dots)
-
-        plt.fill(dots[hull.vertices, 0], dots[hull.vertices, 1], self._triangle.color.color)
-
+        plt.fill([A[0], B[0], C[0]], [A[1], B[1], C[1]], self._triangle.color.color)
 
         plt.xlabel('x')
         plt.ylabel('y')
@@ -101,10 +100,12 @@ class TriangleDrawer:
         plt.savefig(r'D:\PyCharm\PycharmProjects\IGILab4\task4\plots.png', dpi=300)
         plt.show()
 
+
 class Task4(Task):
     @staticmethod
     def perform():
         """function for performing fourth task"""
+
         a = inputCheck('please, enter the base of triangle: ', TYPES.FLOAT)
         h = inputCheck('please, enter the height of triangle: ', TYPES.FLOAT)
         x = inputCheck('please, enter the angle: ', TYPES.INT)

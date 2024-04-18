@@ -6,6 +6,7 @@ from task5.task5 import Task5
 from task6.task6 import Task6
 from inputfunctions import inputCheck, TYPES
 
+
 class Program:
     @staticmethod
     def perform():
@@ -30,6 +31,7 @@ class Program:
                     break
                 case _:
                     print("incorrect input.")
+
 
 if __name__ == '__main__':
     program = Program()

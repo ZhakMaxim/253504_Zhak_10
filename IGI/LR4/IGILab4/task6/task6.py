@@ -2,6 +2,7 @@ import pandas as pd
 from statistics import mean
 from task import Task
 
+
 class DataFrameHandler:
     def __init__(self, file_name):
         self._file_name = file_name
@@ -25,6 +26,7 @@ class DataFrameHandler:
         buff = self._data_frame[self._data_frame['ram'] > ram_mean]
         res = buff['clock_speed'].mean()
         return res
+
 
 class Task6(Task):
     @staticmethod

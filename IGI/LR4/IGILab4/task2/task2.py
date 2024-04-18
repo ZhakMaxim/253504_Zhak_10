@@ -3,6 +3,7 @@ from inputfunctions import inputCheck, TYPES
 from zipfile import ZipFile
 from task import Task
 
+
 class FileZipper:
     _zip_name = r'task2\case1.zip'
     _filename = r'task2\case1.txt'
@@ -123,6 +124,7 @@ class TextHandler:
     def find_every_odd_word(self):
         words_list = re.findall(r'\w+', self._text)
         return [word for word in words_list if (words_list.index(word) + 1) % 2]
+
 
 class Task2(Task):
     @staticmethod

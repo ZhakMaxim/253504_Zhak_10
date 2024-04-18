@@ -4,6 +4,7 @@ class TYPES(Enum):
     INT = 1
     FLOAT = 2
 
+
 def inputCheck(string, type_):
     """function for input check"""
     while True:

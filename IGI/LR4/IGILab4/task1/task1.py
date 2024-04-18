@@ -4,12 +4,14 @@ from inputfunctions import *
 from task import Task
 from abc import ABC, abstractmethod
 
+
 notebook = {'John': '123-456-789',
             'Victor': '111-222-333',
             'Drew': '444-555-666',
             'Paul': '777-888-999',
             'Igor': '000-111-222'
             }
+
 
 class DataHandler(ABC):
     def __init__(self, filename):

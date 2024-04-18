@@ -25,4 +25,4 @@ class Task5(Task):
         print(f'standard deviation, calculated by numpy: {round(float(np.std(matrix)), 2)}')
         matrix_1d = matrix.reshape([1, n*m])
         matrix_list = [el for el in matrix_1d[0]]
-        print(f'standard deviation, calculated by my function:{round(calculate_mean_deviation(matrix_list), 2)}')
+        print(f'standard deviation, calculated by my function: {round(calculate_mean_deviation(matrix_list), 2)}')

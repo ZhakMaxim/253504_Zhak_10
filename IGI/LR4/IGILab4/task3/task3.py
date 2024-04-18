@@ -6,16 +6,15 @@ import numpy as np
 from statistics import median, mode
 from task import Task
 
+
 class SeriesPlotBuilder:
-    def __init__(self, series, iterations):
-        self._series = series
+    def __init__(self, iterations):
         self._iterations = iterations
 
     def showPlot(self):
         x = np.linspace(-0.99, 0.99, 200)
         y1 = 1/(1-x)
         y2 = sum(x**i for i in range(self._iterations))
-        plt.style.use('_mpl-gallery')
         plt.plot(x, y1, label='1/(1-x)', color='r')
         plt.plot(x, y2, label='Series', color='g')
         plt.subplots_adjust(bottom=0.05, left=0.05)
@@ -47,14 +46,16 @@ class Series:
             series.append(self._x**i)
             seriesResult += self._x**i
             if fabs(seriesResult - 1/(1-self._x)) <= self._eps:
-                print(f"x = {self._x}, n = {i}, F(x) = {round(seriesResult, 10)}, Math F(x) = {round(1/(1-self._x), 10)}"
+                print(f"x = {self._x}, n = {i}, F(x) = {round(seriesResult, 10)},"
+                      f" Math F(x) = {round(1/(1-self._x), 10)}"
                       f", eps = {self._eps}")
+
                 print(f"average of series elements: {round(seriesResult/(i + 1), 10)}")
                 print(f"median : {median(series)}")
                 print(f"mode: {mode(series)}")
                 print(f"dispersion: {statistics.variance(series)}")
                 print(f"mean deviation: {statistics.stdev(series)}")
-                return series, i
+                return i
 
         print("max count of iterations")
         return
@@ -71,8 +72,8 @@ class Task3(Task):
                 continue
             eps = inputCheck('please, input eps: ', TYPES.FLOAT)
             series = Series(x, eps)
-            series_lst, n = series.calculateSeries()
+            n = series.calculateSeries()
 
-            seriesPlotBuilder = SeriesPlotBuilder(series_lst, n)
+            seriesPlotBuilder = SeriesPlotBuilder(n)
             seriesPlotBuilder.showPlot()
             return
