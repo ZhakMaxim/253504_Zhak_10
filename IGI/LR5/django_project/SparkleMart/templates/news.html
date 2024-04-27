@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>News</title>
+</head>
+<body>
+    <h1>News</h1>
+    {% for news_item in all_news %}
+        <div>
+            <h2>{{ news_item.title }}</h2>
+            <p>{{ news_item.content }}</p>
+            <img src="{{ news_item.image.url }}" alt="{{ news_item.title }}">
+            <p>{{ news_item.published_date }}</p>
+        </div>
+    {% endfor %}
+</body>
+</html>

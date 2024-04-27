@@ -19,7 +19,19 @@ from django.contrib import admin
 from django.urls import path
 from SparkleMart import views
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
+    path('home/', views.home, name='home'),
+    path('about/', views.about_company, name='about'),
+    path('news/', views.news, name='news'),
+    path('terms/', views.terms, name='terms'),
+    path('contacts/', views.contacts, name='contacts'),
+    path('vacancies/', views.vacancies, name='vacancies'),
+    path('reviews/', views.reviews, name='reviews'),
+    path('privacy-policy', views.privacy_policy, name='privacy_policy'),
+
     path('admin/', admin.site.urls),
     path('register/', views.UserRegistrationView.as_view(), name='register'),
     path('login/', views.UserAuthorizationView.as_view(), name='login'),
@@ -38,3 +50,7 @@ urlpatterns = [
     path('purchases/<int:pk>/', views.PurchaseDetailView.as_view(), name='purchase'),
     path('promos/', views.PromoListView.as_view(), name='promos'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)

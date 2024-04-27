@@ -1,7 +1,48 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-import re
-from django.core.exceptions import ValidationError
+
+
+class Article(models.Model):
+    title = models.CharField(max_length=100)
+    content = models.TextField()
+    image = models.ImageField(upload_to='images/')
+    published_date = models.DateTimeField(auto_now_add=True)
+
+
+class CompanyInfo(models.Model):
+    text = models.TextField()
+
+
+class News(models.Model):
+    title = models.CharField(max_length=100)
+    content = models.TextField()
+    image = models.ImageField(upload_to='images/')
+    published_date = models.DateTimeField(auto_now_add=True)
+
+class Term(models.Model):
+    question = models.CharField(max_length=255)
+    answer = models.TextField()
+    date_added = models.DateField(auto_now_add=True)
+
+
+class Contact(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    photo = models.ImageField(upload_to='images/')
+    phone = models.CharField(max_length=20)
+    email = models.EmailField()
+
+
+class Vacancy(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.TextField()
+
+
+class Review(models.Model):
+    name = models.CharField(max_length=100)
+    rating = models.IntegerField()
+    text = models.TextField()
+    date = models.DateField(auto_now_add=True)
 
 
 class User(AbstractUser):
@@ -15,11 +56,11 @@ class User(AbstractUser):
     def __str__(self):
         return self.first_name
 
-    def save(self, *args, **kwargs):
-        phone_number_pattern = re.compile(r'\+375(25|29|33)\d{7}')
-        if not re.fullmatch(phone_number_pattern, str(self.phone_number)):
-            raise ValidationError("This field accepts mail id of google only")
-        super().save(*args, **kwargs)
+    # def save(self, *args, **kwargs):
+    #     phone_number_pattern = re.compile(r'\+375(25|29|33)\d{7}')
+    #     if not re.fullmatch(phone_number_pattern, str(self.phone_number)):
+    #         raise ValidationError("This field accepts mail id of google only")
+    #     super().save(*args, **kwargs)
 
 
 class Producer(models.Model):
