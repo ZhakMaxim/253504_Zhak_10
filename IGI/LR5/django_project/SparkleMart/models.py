@@ -1,6 +1,7 @@
+from django.core.exceptions import ValidationError
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-
+import re
 
 class Article(models.Model):
     title = models.CharField(max_length=100)
@@ -11,13 +12,6 @@ class Article(models.Model):
 
 class CompanyInfo(models.Model):
     text = models.TextField()
-
-
-class News(models.Model):
-    title = models.CharField(max_length=100)
-    content = models.TextField()
-    image = models.ImageField(upload_to='images/')
-    published_date = models.DateTimeField(auto_now_add=True)
 
 class Term(models.Model):
     question = models.CharField(max_length=255)
@@ -52,15 +46,17 @@ class User(AbstractUser):
     )
     status = models.CharField(max_length=8, choices=STATUS_CHOICES, default="customer")
     phone_number = models.CharField(max_length=13)
+    age = models.PositiveSmallIntegerField(default=100)
+
 
     def __str__(self):
         return self.first_name
 
-    # def save(self, *args, **kwargs):
-    #     phone_number_pattern = re.compile(r'\+375(25|29|33)\d{7}')
-    #     if not re.fullmatch(phone_number_pattern, str(self.phone_number)):
-    #         raise ValidationError("This field accepts mail id of google only")
-    #     super().save(*args, **kwargs)
+    def save(self, *args, **kwargs):
+        phone_number_pattern = re.compile(r'\+375(25|29|33)\d{7}')
+        if not re.fullmatch(phone_number_pattern, str(self.phone_number)) or self.age < 18:
+            raise ValidationError("Error while creating user")
+        super().save(*args, **kwargs)
 
 
 class Producer(models.Model):

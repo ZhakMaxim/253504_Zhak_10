@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>Reviews</h1>
-    {% for review_item in all_reviews %}
+    {% for review_item in object_list %}
         <div>
             <h2>{{ review_item.name }}</h2>
             <p>Rating: {{ review_item.rating }}/5</p>

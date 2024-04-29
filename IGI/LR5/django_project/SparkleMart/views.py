@@ -2,13 +2,16 @@ import datetime
 import json
 
 from .models import *
+from .forms import *
 
-from django.views.decorators.csrf import csrf_exempt
-from django.http import HttpResponse, JsonResponse, HttpResponseRedirect, HttpResponseNotFound
-from django.shortcuts import render
+from django.contrib.auth.views import LoginView
+from django.http import HttpResponse, JsonResponse, HttpResponseNotFound
+from django.shortcuts import render, redirect
 
 from django.contrib.auth.models import auth
 from django.contrib.auth import authenticate
+
+from django.urls import reverse_lazy
 
 from django.views.generic import *
 from django.core.exceptions import ObjectDoesNotExist
@@ -18,84 +21,87 @@ def home(request):
     latest_article = Article.objects.latest('published_date')
     return render(request, 'home.html', {'latest_article': latest_article})
 
+
 def about_company(request):
     company_info = CompanyInfo.objects.first()
     return render(request, 'about_company.html', {'company_info': company_info})
 
+
 def news(request):
-    all_news = News.objects.all()
+    all_news = Article.objects.all()
     return render(request, 'news.html', {'all_news': all_news})
+
 
 def terms(request):
     all_terms = Term.objects.all()
     return render(request, 'terms.html', {'all_terms': all_terms})
 
+
 def contacts(request):
     all_contacts = Contact.objects.all()
     return render(request, 'contacts.html', {'all_contacts': all_contacts})
+
 
 def vacancies(request):
     all_vacancies = Vacancy.objects.all()
     return render(request, 'vacancies.html', {'all_vacancies': all_vacancies})
 
-def reviews(request):
-    all_reviews = Review.objects.all()
-    return render(request, 'reviews.html', {'all_reviews': all_reviews})
 
 def privacy_policy(request):
     return render(request, 'privacy_policy.html')
 
-class UserRegistrationView(View):
-    @csrf_exempt
-    def post(self, request):
-        body_unicode = request.body.decode('utf-8')
-        body = json.loads(body_unicode)
 
-        user = User.objects.create_user(
-            username=body["username"],
-            password=body["password"],
-            email=body["email"],
-            phone_number=body["phone_number"],
-            status=body["status"],
-        )
-        if user:
-            user_data = {
-                "username": body["username"],
-                "password": body["password"],
-                "email": body["email"],
-                "phone_number": body["phone_number"],
-                "status": body["status"],
-            }
-            return JsonResponse(user_data, safe=False)
-        return HttpResponse('error while creating user!')
+class ReviewListView(ListView):
+    model = Review
+    queryset = Review.objects.all()
+    template_name = 'reviews.html'
 
 
-class UserAuthorizationView(View):
-    @csrf_exempt
-    def post(self, request):
-        body_unicode = request.body.decode('utf-8')
-        body = json.loads(body_unicode)
-        user = authenticate(request, username=body["username"], password=body["password"])
+class ReviewCreateView(View):
 
-        if user is not None:
-            auth.login(request, user)
+    def get(self, request, *args, **kwargs):
+        if request.user.is_authenticated and request.user.status == 'customer':
+            form = ReviewForm(request.GET)
+            return render(request, 'add_review.html', {'form': form})
+        return HttpResponseNotFound('page not found')
 
-            user_data = {
-                "username": body["username"],
-                "password": body["password"],
-                "email": body["email"],
-                "phone_number": body["phone_number"],
-                "status": body["status"],
-            }
-            return JsonResponse(user_data, safe=False)
-        return HttpResponse('login unsuccessfully!')
+    def post(self, request, *args, **kwargs):
+        if request.user.is_authenticated and request.user.status == 'customer':
+            form = ReviewForm(request.POST)
+            if form.is_valid():
+                form.save()
+                return redirect('reviews')
+        return HttpResponseNotFound('page not found')
+
+
+class UserRegistrationView(CreateView):
+    def post(self, request, *args, **kwargs):
+        form = RegistrationForm(request.POST)
+        if form.is_valid():
+            user = form.save(commit=False)
+            user.save()
+            return redirect('login')
+        else:
+            return render(request, 'register.html', {'form': form})
+
+    def get(self, request, *args, **kwargs):
+        form = RegistrationForm()
+        return render(request, 'register.html', {'form': form})
+
+
+class UserAuthorizationView(LoginView):
+    redirect_authenticated_user = True
+    template_name = 'login.html'
+
+    def get_success_url(self):
+        return reverse_lazy('home')
 
 
 class UserLogoutView(View):
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated:
             auth.logout(request)
-        return HttpResponseRedirect('/products')
+        return redirect('home')
 
 
 class UserListView(View):
@@ -183,17 +189,19 @@ class ProductDetailView(DetailView):
     model = Product
 
     def get(self, request, *args, **kwargs):
-        product = self.get_object()
-        categories = list(product.category.all().values_list('name', flat=True))
+        if Product.objects.filter(pk=self.kwargs.get("pk")).exists():
+            product = self.get_object()
+            categories = list(product.category.all().values_list('name', flat=True))
 
-        product_data = {
-            'id': product.id,
-            'name': product.name,
-            'price': product.price,
-            'category': categories,
-            'producer_id': product.producer.id,
-        }
-        return JsonResponse(product_data)
+            product_data = {
+                'id': product.id,
+                'name': product.name,
+                'price': product.price,
+                'category': categories,
+                'producer_id': product.producer.id,
+            }
+            return JsonResponse(product_data)
+        return HttpResponseNotFound('page not found')
 
 
 class OrderCreateView(View):
