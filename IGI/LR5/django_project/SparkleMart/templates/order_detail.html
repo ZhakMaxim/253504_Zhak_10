@@ -1,0 +1,28 @@
+<!-- order_detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Detail</title>
+</head>
+<body>
+    <h1>Order Detail</h1>
+    <p>User: {{ order.user.username }}</p>
+    <p>Number: {{ order.number }}</p>
+    <p>Product ID: {{ order.product.id }}</p>
+    <p>Price: {{ order.price }}</p>
+    <p>Promo Code: {{ order.promo_code }}</p>
+    <p>Amount: {{ order.amount }}</p>
+    <p>Date: {{ order.date }}</p>
+    <p>Is Active: {{ order.is_active }}</p>
+
+    {% if form %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Delete</button>
+    </form>
+    {% endif %}
+</body>
+</html>

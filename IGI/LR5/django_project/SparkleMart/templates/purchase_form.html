@@ -1,0 +1,9 @@
+<h1>Order Details</h1>
+<p>number: {{ order.number }}</p>
+<p>Price: ${{ order.price }}</p>
+
+<form method="post" action="{% url 'create_purchase' pk=order.pk %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Make purchase</button>
+</form>

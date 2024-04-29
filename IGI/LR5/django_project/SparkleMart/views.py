@@ -58,12 +58,11 @@ class ReviewListView(ListView):
 
 
 class ReviewCreateView(View):
-
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated and request.user.status == 'customer':
             form = ReviewForm(request.GET)
             return render(request, 'add_review.html', {'form': form})
-        return HttpResponseNotFound('page not found')
+        return redirect('login')
 
     def post(self, request, *args, **kwargs):
         if request.user.is_authenticated and request.user.status == 'customer':
@@ -71,7 +70,7 @@ class ReviewCreateView(View):
             if form.is_valid():
                 form.save()
                 return redirect('reviews')
-        return HttpResponseNotFound('page not found')
+        return redirect('login')
 
 
 class UserRegistrationView(CreateView):
@@ -157,6 +156,7 @@ class ProductListView(ListView):
                 'id': product.id,
                 'name': product.name,
                 'price': product.price,
+                'amount': product.amount,
                 'category': categories,
                 'producer_id': product.producer.id,
             })
@@ -205,30 +205,46 @@ class ProductDetailView(DetailView):
 
 
 class OrderCreateView(View):
-    def post(self, request, pk, *args, **kwargs):
-        if request.user.is_authenticated and request.user.status == "customer":
+    def get(self, request, pk, *args, **kwargs):
+        if request.user.is_authenticated and request.user.status == "customer" and\
+                Product.objects.filter(pk=pk).exists():
             product = Product.objects.get(pk=pk)
-
-            body_unicode = request.body.decode('utf-8')
-            body = json.loads(body_unicode)
-            amount = body["amount"]
-
-            order = Order.objects.create(user=request.user, product=product, amount=amount,
-                                         price=amount * product.price)
-
-            order_data = {
-                "user": order.user.username,
-                "number": order.number,
-                "product_id": order.product.id,
-                "price": order.price,
-                "promo": order.promo_code,
-                "amount": order.amount,
-                "date": order.date,
-                "is_active": order.is_active,
+            form = OrderForm()
+            context = {
+                'product': product,
+                'form': form,
             }
-            product.amount -= amount
-            product.save()
-            return JsonResponse(order_data, safe=False)
+            return render(request, 'order_form.html', context)
+        return HttpResponseNotFound('page not found')
+
+    def post(self, request, pk, *args, **kwargs):
+        if request.user.is_authenticated and request.user.status == "customer" and \
+                Product.objects.filter(pk=pk).exists():
+            product = Product.objects.get(pk=pk)
+            form = OrderForm(request.POST)
+
+            if form.is_valid():
+                amount = form.cleaned_data['amount']
+
+                if product.amount - amount >= 0:
+                    order = Order.objects.create(user=request.user, product=product, amount=amount,
+                                                 price=amount * product.price)
+
+                    order_data = {
+                        "user": order.user.username,
+                        "number": order.number,
+                        "product_id": order.product.id,
+                        "price": order.price,
+                        "promo": order.promo_code,
+                        "amount": order.amount,
+                        "date": order.date,
+                        "is_active": order.is_active,
+                    }
+
+                    product.amount -= amount
+                    product.save()
+                    return JsonResponse(order_data, safe=False)
+                return HttpResponse('There are not enough products in stock to place an order')
         elif request.user.is_authenticated and request.user.status == "employee":
             return HttpResponseNotFound("Page not found")
         else:
@@ -259,7 +275,7 @@ class OrderListView(View):
         return HttpResponseNotFound("Page not found")
 
 
-class OrderDetailView(View):
+class OrderDeleteDetailView(View):
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated and request.user.status == "employee" \
                 and Order.objects.filter(pk=self.kwargs.get("pk")).exists():
@@ -281,42 +297,35 @@ class OrderDetailView(View):
                 and Order.objects.filter(pk=self.kwargs.get("pk"), user_id=request.user.id).exists():
             pk = self.kwargs.get("pk")
             order = Order.objects.get(pk=pk, user_id=request.user.id)
-
-            order_data = {
-                "user": order.user.username,
-                "number": order.number,
-                "product_id": order.product.id,
-                "price": order.price,
-                "promo": order.promo_code,
-                "amount": order.amount,
-                "date": order.date,
-                "is_active": order.is_active,
-            }
-            return JsonResponse(order_data, safe=False)
+            form = OrderDeleteForm()
+            return render(request, 'order_detail.html', {'form': form, 'order': order})
         return HttpResponseNotFound("Page not found")
 
-
-class OrderDeleteView(DeleteView):
     def post(self, request, *args, **kwargs):
         if request.user.is_authenticated and request.user.status == "customer" \
                 and Order.objects.filter(pk=self.kwargs.get("pk")).exists():
-            pk = self.kwargs.get("pk")
-            order = Order.objects.get(pk=pk, user_id=request.user.id, is_active=True)
+            form = OrderDeleteForm(request.POST)
 
-            order_data = {
-                "user": order.user.username,
-                "number": order.number,
-                "product_id": order.product.id,
-                "price": order.price,
-                "promo": order.promo_code,
-                "amount": order.amount,
-                "date": order.date,
-                "is_active": order.is_active,
-            }
-            order.product.amount += order.amount
-            order.product.save()
-            order.delete()
-            return JsonResponse(order_data, safe=False)
+            if form.is_valid():
+                order_id = self.kwargs.get("pk")
+                order = Order.objects.filter(pk=order_id, user=request.user).first()
+
+                if order:
+                    order_data = {
+                        "user": order.user.username,
+                        "number": order.number,
+                        "product_id": order.product.id,
+                        "price": order.price,
+                        "promo": order.promo_code,
+                        "amount": order.amount,
+                        "date": order.date,
+                        "is_active": order.is_active,
+                    }
+
+                    order.product.amount += order.amount
+                    order.product.save()
+                    order.delete()
+                    return JsonResponse(order_data, safe=False)
         return HttpResponseNotFound("Page not found")
 
 
@@ -346,42 +355,55 @@ class UserOrderListView(View):
         return HttpResponseNotFound("Page not found")
 
 
-class PurchaseCreateView(CreateView):
+class PurchaseCreateView(View):
+    def get(self, request, pk, *args, **kwargs):
+        if request.user.is_authenticated and request.user.status == "customer" \
+                and Order.objects.filter(pk=self.kwargs.get("pk"), user=request.user, is_active=True).exists():
+            order = Order.objects.get(pk=pk)
+            form = PurchaseCreateForm()
+            context = {
+                'order': order,
+                'form': form,
+            }
+            return render(request, 'purchase_form.html', context)
+        return HttpResponseNotFound('page not found')
+
     def post(self, request, *args, **kwargs):
         if request.user.is_authenticated and request.user.status == "customer" \
                 and Order.objects.filter(pk=self.kwargs.get("pk"), user=request.user, is_active=True).exists():
-            pk = self.kwargs.get("pk")
-            order = Order.objects.get(pk=pk, user=request.user, is_active=True)
+            form = PurchaseCreateForm(request.POST)
 
-            body_unicode = request.body.decode('utf-8')
-            body = json.loads(body_unicode)
+            if form.is_valid():
+                pk = self.kwargs.get("pk")
+                order = Order.objects.get(pk=pk, user=request.user, is_active=True)
 
-            delivery_datetime = datetime.datetime.now() + datetime.timedelta(days=1)
-            delivery_datetime = delivery_datetime.replace(hour=17, minute=0, second=0, microsecond=0)
+                delivery_datetime = datetime.datetime.now() + datetime.timedelta(days=1)
+                delivery_datetime = delivery_datetime.replace(hour=17, minute=0, second=0, microsecond=0)
 
-            promo_code = body.get("promo_code")
-            promo = Promo.objects.filter(code=promo_code).first()
+                promo_code = form.cleaned_data["promo_code"]
+                promo = Promo.objects.filter(code=promo_code).first()
 
-            if promo:
-                order.apply_promo(promo)
+                if promo:
+                    order.apply_promo(promo)
 
-            purchase = Purchase.objects.create(
-                user=request.user,
-                order=order,
-                town=body["town"],
-                delivery_date=delivery_datetime
-            )
+                purchase = Purchase.objects.create(
+                    user=request.user,
+                    order=order,
+                    town=form.cleaned_data["town"],
+                    delivery_date=delivery_datetime
+                )
 
-            order.is_active = False
-            order.save()
-            purchase_data = {
-                "order_id": order.number,
-                "user_id": request.user.id,
-                "town": body["town"],
-                "purchase_date": purchase.purchase_date,
-                "delivery_date": purchase.delivery_date,
-            }
-            return JsonResponse(purchase_data, safe=False)
+                order.is_active = False
+                order.save()
+
+                purchase_data = {
+                    "order_id": order.number,
+                    "user_id": request.user.id,
+                    "town": form.cleaned_data["town"],
+                    "purchase_date": purchase.purchase_date,
+                    "delivery_date": purchase.delivery_date,
+                }
+                return JsonResponse(purchase_data, safe=False)
         return HttpResponseNotFound("Page not found")
 
 
