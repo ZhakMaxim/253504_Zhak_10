@@ -3,6 +3,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 import re
 
+
 class Article(models.Model):
     title = models.CharField(max_length=100)
     content = models.TextField()
@@ -54,7 +55,7 @@ class User(AbstractUser):
 
     def save(self, *args, **kwargs):
         phone_number_pattern = re.compile(r'\+375(25|29|33)\d{7}')
-        if not re.fullmatch(phone_number_pattern, str(self.phone_number)) or self.age < 18:
+        if not re.fullmatch(phone_number_pattern, str(self.phone_number)) or self.age < 18 or self.age > 100:
             raise ValidationError("Error while creating user")
         super().save(*args, **kwargs)
 
@@ -120,3 +121,7 @@ class Promo(models.Model):
 class PromoUsage(models.Model):
     promo = models.ForeignKey(Promo, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+
+class PickUpPoint(models.Model):
+    address = models.CharField(max_length=100)

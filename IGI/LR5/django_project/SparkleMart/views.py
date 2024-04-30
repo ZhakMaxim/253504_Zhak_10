@@ -1,5 +1,4 @@
 import datetime
-import json
 
 from .models import *
 from .forms import *
@@ -9,13 +8,13 @@ from django.http import HttpResponse, JsonResponse, HttpResponseNotFound
 from django.shortcuts import render, redirect
 
 from django.contrib.auth.models import auth
-from django.contrib.auth import authenticate
 
 from django.urls import reverse_lazy
 
 from django.views.generic import *
 from django.core.exceptions import ObjectDoesNotExist
 
+import requests
 
 def home(request):
     latest_article = Article.objects.latest('published_date')
@@ -51,6 +50,18 @@ def privacy_policy(request):
     return render(request, 'privacy_policy.html')
 
 
+def random_fact(request):
+    url = 'https://favqs.com/api/qotd'
+    fact = requests.get(url.format()).json()
+    return JsonResponse(fact, safe=False)
+
+
+def random_joke(request):
+    url = 'https://official-joke-api.appspot.com/random_joke'
+    joke = requests.get(url.format()).json()
+    return JsonResponse(joke, safe=False)
+
+
 class ReviewListView(ListView):
     model = Review
     queryset = Review.objects.all()
@@ -58,7 +69,7 @@ class ReviewListView(ListView):
 
 
 class ReviewCreateView(View):
-    def get(self, request, *args, **kwargs):
+    def get(self, request, **kwargs):
         if request.user.is_authenticated and request.user.status == 'customer':
             form = ReviewForm(request.GET)
             return render(request, 'add_review.html', {'form': form})
@@ -74,18 +85,27 @@ class ReviewCreateView(View):
 
 
 class UserRegistrationView(CreateView):
-    def post(self, request, *args, **kwargs):
-        form = RegistrationForm(request.POST)
-        if form.is_valid():
-            user = form.save(commit=False)
-            user.save()
-            return redirect('login')
-        else:
-            return render(request, 'register.html', {'form': form})
+    # def post(self, request, *args, **kwargs):
+    #     form = RegistrationForm(request.POST)
+    #     if form.is_valid():
+    #         user = form.save(commit=False)
+    #         user.save()
+    #         return redirect('login')
+    #     else:
+    #         return render(request, 'register.html', {'form': form})
+    #
+    # def get(self, request, *args, **kwargs):
+    #     form = RegistrationForm()
+    #     return render(request, 'register.html', {'form': form})
 
-    def get(self, request, *args, **kwargs):
-        form = RegistrationForm()
-        return render(request, 'register.html', {'form': form})
+    form_class = RegistrationForm
+    template_name = 'register.html'
+    success_url = '/login/'
+
+    # def form_valid(self, form):
+    #     user = form.save(commit=False)
+    #     user.save()
+    #     return super().form_valid(form)
 
 
 class UserAuthorizationView(LoginView):
@@ -106,7 +126,7 @@ class UserLogoutView(View):
 class UserListView(View):
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated and request.user.status == "employee":
-            users = User.objects.filter(status="customer")
+            users = User.objects.filter(status="customer", is_superuser=False)
 
             users_data = []
             for user in users:
@@ -122,7 +142,8 @@ class UserListView(View):
 
 class UserDetailView(View):
     def get(self, request, *args, **kwargs):
-        if request.user.is_authenticated and request.user.status == "employee":
+        if request.user.is_authenticated and request.user.status == "employee" and \
+                User.objects.filter(pk=self.kwargs.get("pk"), is_superuser=False):
             pk = self.kwargs.get("pk")
             user = User.objects.get(pk=pk)
             if user.status != "employee":
@@ -143,10 +164,10 @@ class ProductListView(ListView):
     def get(self, request, *args, **kwargs):
         min_price = request.GET.get('min_price')
         max_price = request.GET.get('max_price')
-        category_id = request.GET.get('category_id')
-        producer_id = request.GET.get('producer_id')
+        category_name = request.GET.get('cat_name')
+        producer_name = request.GET.get('prod_name')
 
-        products = self.filter_products(min_price, max_price, producer_id, category_id)
+        products = self.filter_products(min_price, max_price, producer_name, category_name)
 
         products_data = []
         for product in products:
@@ -158,20 +179,25 @@ class ProductListView(ListView):
                 'price': product.price,
                 'amount': product.amount,
                 'category': categories,
+                'producer_name': producer_name,
                 'producer_id': product.producer.id,
             })
         return JsonResponse(products_data, safe=False)
 
     @staticmethod
-    def filter_products(min_price=None, max_price=None, producer=None, category=None):
+    def filter_products(min_price=None, max_price=None, prod_name=None, cat_name=None):
         products = Product.objects.all()
 
         filtered_products = None
 
-        if category:
-            products = products.filter(category=category)
-        if producer:
-            products = products.filter(producer=producer)
+        if cat_name:
+            if Category.objects.filter(name=cat_name).exists():
+                category = Category.objects.get(name=cat_name)
+                products = products.filter(category=category)
+        if prod_name:
+            if Producer.objects.filter(name=prod_name).exists():
+                producer = Producer.objects.get(name=prod_name)
+                products = products.filter(producer=producer)
 
         if min_price is not None and max_price is not None:
             filtered_products = products.filter(price__gte=min_price, price__lte=max_price)
@@ -198,6 +224,7 @@ class ProductDetailView(DetailView):
                 'name': product.name,
                 'price': product.price,
                 'category': categories,
+                'producer_name': product.producer.name,
                 'producer_id': product.producer.id,
             }
             return JsonResponse(product_data)
@@ -206,7 +233,7 @@ class ProductDetailView(DetailView):
 
 class OrderCreateView(View):
     def get(self, request, pk, *args, **kwargs):
-        if request.user.is_authenticated and request.user.status == "customer" and\
+        if request.user.is_authenticated and request.user.status == "customer" and \
                 Product.objects.filter(pk=pk).exists():
             product = Product.objects.get(pk=pk)
             form = OrderForm()
@@ -331,9 +358,11 @@ class OrderDeleteDetailView(View):
 
 class UserOrderListView(View):
     def get(self, request, *args, **kwargs):
-        if request.user.is_authenticated and request.user.status == "employee" or \
-                request.user.is_authenticated and request.user.status == "customer" and \
-                self.kwargs.get("pk") == request.user.id:
+        if request.user.is_authenticated and request.user.status == "employee" or\
+                request.user.is_authenticated and request.user.status == "customer" and\
+                self.kwargs.get("pk") == str(request.user.pk) and not User.objects.filter(
+                    pk=self.kwargs.get("pk")).first().is_superuser and not User.objects.filter(
+                    pk=self.kwargs.get("pk")).first().status == 'employee':
             pk = self.kwargs.get("pk")
 
             orders = Order.objects.filter(user_id=pk)
@@ -474,3 +503,18 @@ class PromoListView(View):
                 "discount": promo.discount,
             })
         return JsonResponse(promos_data, safe=False)
+
+
+class PickUpPointListView(View):
+    def get(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            pick_up_points = PickUpPoint.objects.all()
+            if pick_up_points:
+                pick_up_points_data = []
+                for pick_up_point in pick_up_points:
+                    pick_up_points_data.append({
+                        'address': pick_up_point.address,
+                    })
+                return JsonResponse(pick_up_points_data, safe=False)
+            return HttpResponse('there are no pick up points')
+        return HttpResponseNotFound('page not found')

@@ -20,5 +20,5 @@ class OrderDeleteForm(forms.Form):
     confirm_delete = forms.BooleanField(label='Confirm delete', required=True)
 
 class PurchaseCreateForm(forms.Form):
-    promo_code = forms.CharField(max_length=8)
+    promo_code = forms.CharField(max_length=8, required=False)
     town = forms.CharField(max_length=50)
