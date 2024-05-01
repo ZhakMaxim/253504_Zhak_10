@@ -1716,3 +1716,415 @@ django.template.exceptions.TemplateDoesNotExist: linear_trend
 2024-05-01 03:21:19,900 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
 2024-05-01 03:23:27,949 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
 2024-05-01 03:23:32,660 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 15:26:53,884 INFO latest article title: title1
+2024-05-01 15:26:58,133 INFO latest article title: title1
+2024-05-01 15:27:13,092 ERROR Internal Server Error: /random_joke/
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\urllib3\util\connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\urllib3\connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\urllib3\connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x0000023A21D29990>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='official-joke-api.appspot.com', port=443): Max retries exceeded with url: /random_joke (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000023A21D29990>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py", line 72, in random_joke
+    joke = requests.get(url.format()).json()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='official-joke-api.appspot.com', port=443): Max retries exceeded with url: /random_joke (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000023A21D29990>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2024-05-01 15:27:39,792 ERROR Internal Server Error: /random_joke/
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\urllib3\util\connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\urllib3\connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\urllib3\connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x0000023A2234BB90>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='official-joke-api.appspot.com', port=443): Max retries exceeded with url: /random_joke (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000023A2234BB90>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py", line 72, in random_joke
+    joke = requests.get(url.format()).json()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='official-joke-api.appspot.com', port=443): Max retries exceeded with url: /random_joke (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000023A2234BB90>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2024-05-01 15:29:45,856 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 15:30:47,133 ERROR Internal Server Error: /monthly_sales_volume
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 92, in monthly_sales_volume
+    for month, sales in monthly_sales_.items():
+                        ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'items'
+2024-05-01 15:30:48,348 ERROR Internal Server Error: /monthly_sales_volume
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 92, in monthly_sales_volume
+    for month, sales in monthly_sales_.items():
+                        ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'items'
+2024-05-01 15:30:56,637 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 15:33:33,276 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 15:33:35,820 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 15:34:00,001 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 15:34:19,615 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 15:34:22,208 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 15:39:39,877 INFO latest article title: title1
+2024-05-01 15:44:31,054 INFO D:\253504_Zhak_10\IGI\LR5\django_project\HouseholdChemicalsStore\urls.py changed, reloading.
+2024-05-01 15:46:47,978 ERROR Internal Server Error: /demand_analysis
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 64, in demand_analysis
+    return render(request, 'demand_analysis.html', {'most_demanded': most_demanded[0],
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' * most_demanded.price' from 'most_demanded.amount * most_demanded.price'
+2024-05-01 15:49:39,434 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 15:55:30,575 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 15:55:40,367 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 15:55:48,197 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 15:56:28,432 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 15:56:37,287 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 15:57:10,105 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 15:57:41,223 INFO latest article title: title1
+2024-05-01 15:57:45,181 WARNING Not Found: /bob
+2024-05-01 15:57:57,611 INFO user successfully authorised!
+2024-05-01 15:57:57,624 INFO latest article title: title1
+2024-05-01 15:58:07,508 INFO created Order object
+2024-05-01 15:58:15,108 INFO created Order object
+2024-05-01 15:58:20,556 INFO created Order object
+2024-05-01 15:58:27,044 INFO created Order object
+2024-05-01 15:58:31,924 INFO created Order object
+2024-05-01 15:58:38,141 INFO created Order object
+2024-05-01 15:58:44,334 WARNING PurchaseCreateView: page not found
+2024-05-01 15:58:44,334 WARNING Not Found: /orders/17/purchase/create/
+2024-05-01 15:58:47,733 WARNING PurchaseCreateView: page not found
+2024-05-01 15:58:47,733 WARNING Not Found: /orders/18/purchase/create/
+2024-05-01 15:58:50,877 WARNING PurchaseCreateView: page not found
+2024-05-01 15:58:50,877 WARNING Not Found: /orders/19/purchase/create/
+2024-05-01 15:59:00,905 INFO created Purchase object
+2024-05-01 15:59:05,652 INFO created Purchase object
+2024-05-01 15:59:12,285 INFO created Purchase object
+2024-05-01 15:59:18,460 INFO created Purchase object
+2024-05-01 15:59:25,085 INFO created Purchase object
+2024-05-01 15:59:31,902 INFO created Purchase object
+2024-05-01 15:59:35,297 WARNING PurchaseCreateView: page not found
+2024-05-01 15:59:35,297 WARNING Not Found: /orders/26/purchase/create/
+2024-05-01 15:59:39,026 INFO user successfully logout!
+2024-05-01 15:59:39,033 INFO latest article title: title1
+2024-05-01 16:06:49,380 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:09:27,946 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:10:04,249 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:10:26,919 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:10:38,392 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:10:47,391 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:11:03,907 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:11:20,081 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:11:30,130 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:12:08,187 INFO D:\253504_Zhak_10\IGI\LR5\django_project\HouseholdChemicalsStore\urls.py changed, reloading.
+2024-05-01 16:13:17,403 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:15:35,674 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:18:54,761 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:21:09,809 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:21:26,880 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:23:35,746 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:23:44,694 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:24:05,036 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:24:12,844 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:24:16,508 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:24:49,470 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:24:52,950 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:25:28,649 ERROR Internal Server Error: /customers
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 52, in customers
+    customers_ = User.objects.filter(status='customer', is_superucer=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1421, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1439, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1446, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1407, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1217, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1709, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'is_superucer' into field. Choices are: age, contact, date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, orders, password, phone_number, promousage, purchases, status, user_permissions, username
+2024-05-01 16:25:45,749 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:30:16,665 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:30:30,743 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:30:48,895 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:32:13,087 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:32:15,578 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:32:18,201 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:32:34,296 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:36:54,611 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:36:59,246 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:37:12,330 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:37:29,456 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:38:16,105 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:38:37,387 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:40:42,113 WARNING Not Found: /demand_analys
+2024-05-01 16:42:50,538 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:43:04,589 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:43:23,791 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:43:25,616 ERROR Internal Server Error: /monthly_sales_volume
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 147, in monthly_sales_volume
+    for idx, month, sales in monthly_sales_.items():
+        ^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 3, got 2)
+2024-05-01 16:43:43,122 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:43:47,637 ERROR Internal Server Error: /monthly_sales_volume
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 149, in monthly_sales_volume
+    labels = list(sales.keys())
+                  ^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'keys'
+2024-05-01 16:43:48,328 ERROR Internal Server Error: /monthly_sales_volume
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 149, in monthly_sales_volume
+    labels = list(sales.keys())
+                  ^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'keys'
+2024-05-01 16:44:12,109 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 16:44:20,861 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:27:54,471 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:28:15,914 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:30:18,086 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:30:33,245 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:30:48,665 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:30:50,699 ERROR Internal Server Error: /monthly_sales_volume
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 152, in monthly_sales_volume
+    plt.bar(labels, values, color=bar_colors[:len(labels)])
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\matplotlib\pyplot.py", line 2754, in bar
+    return gca().bar(
+           ^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\matplotlib\__init__.py", line 1478, in inner
+    return func(ax, *map(sanitize_sequence, args), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\matplotlib\axes\_axes.py", line 2485, in bar
+    color = itertools.chain(itertools.cycle(mcolors.to_rgba_array(color)),
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\matplotlib\colors.py", line 503, in to_rgba_array
+    rgba = np.array([to_rgba(cc) for cc in c])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\matplotlib\colors.py", line 503, in <listcomp>
+    rgba = np.array([to_rgba(cc) for cc in c])
+                     ^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\matplotlib\colors.py", line 302, in to_rgba
+    rgba = _to_rgba_no_colorcycle(c, alpha)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\matplotlib\colors.py", line 384, in _to_rgba_no_colorcycle
+    raise ValueError(f"Invalid RGBA argument: {orig_c!r}")
+ValueError: Invalid RGBA argument: 'light blue'
+2024-05-01 18:30:55,436 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.

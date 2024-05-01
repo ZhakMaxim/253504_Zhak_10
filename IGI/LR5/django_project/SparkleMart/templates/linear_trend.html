@@ -1,11 +1,31 @@
+<!-- linear_trend.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+
     <meta charset="UTF-8">
-    <title>Yearly Sales Report</title>
+    <title>Yearly sales report</title>
 </head>
 <body>
     <h1>Yearly Sales Report with Trend</h1>
     <img src="data:image/png;base64,{{ image }}" height="500" width="1300">
+    <h2>Yearly Sales Data</h2>
+    <table>
+        <tr>
+            <th>Year</th>
+            <th>Total Sales</th>
+        </tr>
+        {% for year, sales in yearly_sales_data %}
+        <tr>
+            <td>{{ year }}</td>
+            <td>${{ sales }}</td>
+        </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>

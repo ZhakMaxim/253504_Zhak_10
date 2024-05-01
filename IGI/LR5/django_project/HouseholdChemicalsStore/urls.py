@@ -42,7 +42,6 @@ urlpatterns = [
     path('customers', statistic_views.customers, name='customers'),
     path('demand_analysis', statistic_views.demand_analysis, name='demand_analysis'),
     path('monthly_sales_volume', statistic_views.monthly_sales_volume, name='monthly_sales_volume'),
-    path('yearly_sales', statistic_views.yearly_sales, name='yearly_sales'),
     path('linear_trend', statistic_views.linear_sales_trend, name='linear_trend'),
 
     path('admin/', admin.site.urls),
