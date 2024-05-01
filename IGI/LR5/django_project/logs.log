@@ -2128,3 +2128,1070 @@ Traceback (most recent call last):
     raise ValueError(f"Invalid RGBA argument: {orig_c!r}")
 ValueError: Invalid RGBA argument: 'light blue'
 2024-05-01 18:30:55,436 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:39:53,551 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:40:16,275 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:40:45,426 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:41:50,616 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:41:59,442 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:44:08,240 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:44:57,647 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:45:13,298 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:45:17,772 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:45:55,598 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:46:13,265 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:46:39,487 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:49:12,410 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:49:16,978 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:49:20,363 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:49:25,660 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:49:29,991 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:50:01,377 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:50:05,844 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:50:16,040 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:50:36,439 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:50:39,183 ERROR Internal Server Error: /monthly_sales_volume
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 153, in monthly_sales_volume
+    plt.bar(labels, values, color=bar_colors[:len(labels)])
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\matplotlib\pyplot.py", line 2754, in bar
+    return gca().bar(
+           ^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\matplotlib\__init__.py", line 1478, in inner
+    return func(ax, *map(sanitize_sequence, args), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\matplotlib\axes\_axes.py", line 2485, in bar
+    color = itertools.chain(itertools.cycle(mcolors.to_rgba_array(color)),
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\matplotlib\colors.py", line 503, in to_rgba_array
+    rgba = np.array([to_rgba(cc) for cc in c])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\matplotlib\colors.py", line 503, in <listcomp>
+    rgba = np.array([to_rgba(cc) for cc in c])
+                     ^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\matplotlib\colors.py", line 302, in to_rgba
+    rgba = _to_rgba_no_colorcycle(c, alpha)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\matplotlib\colors.py", line 384, in _to_rgba_no_colorcycle
+    raise ValueError(f"Invalid RGBA argument: {orig_c!r}")
+ValueError: Invalid RGBA argument: 'lighsteelblue'
+2024-05-01 18:50:49,226 ERROR Internal Server Error: /monthly_sales_volume
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 153, in monthly_sales_volume
+    plt.bar(labels, values, color=bar_colors[:len(labels)])
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\matplotlib\pyplot.py", line 2754, in bar
+    return gca().bar(
+           ^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\matplotlib\__init__.py", line 1478, in inner
+    return func(ax, *map(sanitize_sequence, args), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\matplotlib\axes\_axes.py", line 2485, in bar
+    color = itertools.chain(itertools.cycle(mcolors.to_rgba_array(color)),
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\matplotlib\colors.py", line 503, in to_rgba_array
+    rgba = np.array([to_rgba(cc) for cc in c])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\matplotlib\colors.py", line 503, in <listcomp>
+    rgba = np.array([to_rgba(cc) for cc in c])
+                     ^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\matplotlib\colors.py", line 302, in to_rgba
+    rgba = _to_rgba_no_colorcycle(c, alpha)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\matplotlib\colors.py", line 384, in _to_rgba_no_colorcycle
+    raise ValueError(f"Invalid RGBA argument: {orig_c!r}")
+ValueError: Invalid RGBA argument: 'lighsteelblue'
+2024-05-01 18:50:49,232 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:51:05,598 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:51:45,089 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:52:28,599 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:52:38,913 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:53:39,127 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:53:59,463 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:54:10,653 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:54:31,277 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:56:37,946 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:56:58,899 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:57:38,265 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 18:57:41,908 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 19:05:07,159 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-01 19:05:23,478 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-01 19:05:38,776 INFO latest article title: title1
+2024-05-01 19:07:50,060 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-01 19:09:26,417 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-01 19:10:23,959 INFO latest article title: title1
+2024-05-01 19:10:39,546 INFO user successfully authorised!
+2024-05-01 19:10:39,569 INFO latest article title: title1
+2024-05-01 19:12:02,366 INFO created Order object
+2024-05-01 19:12:51,458 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-01 19:12:59,310 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-01 19:13:14,530 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-01 19:14:24,990 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-01 19:15:24,260 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-01 19:15:36,244 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-01 19:15:53,774 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-01 19:16:22,784 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-01 19:16:38,160 WARNING OrderDeleteView: page not found
+2024-05-01 19:16:38,161 WARNING Not Found: /orders/2/
+2024-05-01 19:16:38,545 WARNING PurchaseCreateView: page not found
+2024-05-01 19:16:38,545 WARNING Not Found: /orders/21/purchase/create/
+2024-05-01 19:16:43,421 WARNING PurchaseCreateView: page not found
+2024-05-01 19:16:43,422 WARNING Not Found: /orders/20/purchase/create/
+2024-05-01 19:16:45,977 WARNING PurchaseCreateView: page not found
+2024-05-01 19:16:45,977 WARNING Not Found: /orders/22/purchase/create/
+2024-05-01 19:16:48,467 WARNING PurchaseCreateView: page not found
+2024-05-01 19:16:48,468 WARNING Not Found: /orders/23/purchase/create/
+2024-05-01 19:16:50,868 WARNING PurchaseCreateView: page not found
+2024-05-01 19:16:50,868 WARNING Not Found: /orders/24/purchase/create/
+2024-05-01 19:16:54,200 WARNING PurchaseCreateView: page not found
+2024-05-01 19:16:54,201 WARNING Not Found: /orders/25/purchase/create/
+2024-05-01 19:17:40,866 INFO created Purchase object
+2024-05-01 19:17:41,040 ERROR Internal Server Error: /orders/26/purchase/create/
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py", line 478, in post
+    "delivery_date": timezone.localtime(purchase.delivery_date),
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\utils\timezone.py", line 218, in localtime
+    raise ValueError("localtime() cannot be applied to a naive datetime")
+ValueError: localtime() cannot be applied to a naive datetime
+2024-05-01 19:18:44,071 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-01 19:20:53,323 INFO created Purchase object
+2024-05-01 19:23:47,425 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 19:24:36,392 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 19:24:53,440 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 19:25:27,083 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 19:25:56,160 INFO user successfully logout!
+2024-05-01 19:25:56,184 INFO latest article title: title1
+2024-05-01 19:28:14,444 INFO user successfully logout!
+2024-05-01 19:28:14,463 INFO latest article title: title1
+2024-05-01 19:28:24,875 INFO user successfully authorised!
+2024-05-01 19:28:24,901 INFO latest article title: title1
+2024-05-01 19:28:27,614 ERROR Internal Server Error: /customers
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view SparkleMart.statistic_views.customers didn't return an HttpResponse object. It returned None instead.
+2024-05-01 19:28:28,260 ERROR Internal Server Error: /customers
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view SparkleMart.statistic_views.customers didn't return an HttpResponse object. It returned None instead.
+2024-05-01 19:29:43,277 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 19:30:14,447 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 19:30:20,835 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 19:30:27,823 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 19:30:33,593 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 19:30:36,448 WARNING Not Found: /customers
+2024-05-01 19:36:43,782 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 20:02:38,052 ERROR Internal Server Error: /linear_trend
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 231, in linear_sales_trend
+    return render(request, 'page_not_found.html', status=404)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'home/' not found. 'home/' is not a valid view function or pattern name.
+2024-05-01 20:02:47,085 INFO latest article title: title1
+2024-05-01 20:02:49,765 INFO latest article title: title1
+2024-05-01 20:02:51,901 INFO latest article title: title1
+2024-05-01 20:02:54,486 INFO latest article title: title1
+2024-05-01 20:03:00,521 INFO latest article title: title1
+2024-05-01 20:03:51,797 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 20:04:05,891 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 20:04:10,480 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 20:04:18,054 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 20:04:22,688 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-01 20:04:33,988 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-01 20:04:41,946 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-01 20:04:54,021 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-01 20:04:58,390 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-01 20:05:04,282 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-01 20:05:13,413 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-01 20:06:08,872 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-01 20:06:16,983 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-01 20:06:24,927 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-01 20:06:35,899 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-01 20:06:48,965 INFO user successfully logout!
+2024-05-01 20:06:48,986 INFO latest article title: title1
+2024-05-01 20:06:53,869 WARNING OrderCreateView: page not found
+2024-05-01 20:08:58,722 WARNING OrderCreateView: page not found
+2024-05-01 20:11:22,249 WARNING OrderCreateView: page not found
+2024-05-01 20:11:23,232 WARNING OrderCreateView: page not found
+2024-05-01 20:11:33,154 WARNING OrderCreateView: page not found
+2024-05-01 20:11:33,569 WARNING OrderCreateView: page not found
+2024-05-01 20:11:33,765 WARNING OrderCreateView: page not found
+2024-05-01 20:12:18,074 WARNING OrderCreateView: page not found
+2024-05-01 20:12:18,571 WARNING OrderCreateView: page not found
+2024-05-01 20:12:18,773 WARNING OrderCreateView: page not found
+2024-05-01 20:12:18,940 WARNING OrderCreateView: page not found
+2024-05-01 20:12:21,321 WARNING OrderCreateView: page not found
+2024-05-01 20:13:20,977 WARNING OrderCreateView: page not found
+2024-05-01 20:13:21,415 WARNING OrderCreateView: page not found
+2024-05-01 20:13:21,576 WARNING OrderCreateView: page not found
+2024-05-01 20:13:21,738 WARNING OrderCreateView: page not found
+2024-05-01 20:13:21,901 WARNING OrderCreateView: page not found
+2024-05-01 20:13:22,073 WARNING OrderCreateView: page not found
+2024-05-01 20:13:22,233 WARNING OrderCreateView: page not found
+2024-05-01 20:15:19,823 WARNING OrderCreateView: page not found
+2024-05-01 20:15:33,763 WARNING OrderCreateView: page not found
+2024-05-01 20:16:15,693 WARNING OrderCreateView: page not found
+2024-05-01 20:16:19,864 WARNING OrderCreateView: page not found
+2024-05-01 20:17:31,836 WARNING OrderCreateView: page not found
+2024-05-01 20:17:32,359 WARNING OrderCreateView: page not found
+2024-05-01 20:17:32,639 WARNING OrderCreateView: page not found
+2024-05-01 20:17:32,785 WARNING OrderCreateView: page not found
+2024-05-01 20:21:25,648 WARNING OrderCreateView: page not found
+2024-05-01 20:21:27,133 WARNING OrderCreateView: page not found
+2024-05-01 20:21:40,631 WARNING OrderCreateView: page not found
+2024-05-01 20:21:46,577 WARNING OrderCreateView: page not found
+2024-05-01 20:22:09,858 WARNING OrderCreateView: page not found
+2024-05-01 20:22:12,639 INFO latest article title: title1
+2024-05-01 20:24:02,080 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-01 20:31:05,993 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 20:31:39,193 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 20:31:45,694 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 20:32:10,477 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 20:32:27,517 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 20:33:23,450 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 20:33:33,009 INFO latest article title: title1
+2024-05-01 20:33:41,679 WARNING Not Found: /admin/l
+2024-05-01 20:34:02,597 ERROR Internal Server Error: /customers
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 83, in customers
+    average_age = User.objects.aggregate(Avg('age'), status='customer', is_superuser=False)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 575, in aggregate
+    self._validate_values_are_expressions(
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1936, in _validate_values_are_expressions
+    raise TypeError(
+TypeError: QuerySet.aggregate() received non-expression(s): False, customer.
+2024-05-01 20:34:03,448 ERROR Internal Server Error: /customers
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 83, in customers
+    average_age = User.objects.aggregate(Avg('age'), status='customer', is_superuser=False)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 575, in aggregate
+    self._validate_values_are_expressions(
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1936, in _validate_values_are_expressions
+    raise TypeError(
+TypeError: QuerySet.aggregate() received non-expression(s): False, customer.
+2024-05-01 20:34:39,999 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 20:34:55,857 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 20:35:05,882 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 20:35:53,753 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 20:36:37,216 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 20:36:39,280 ERROR Internal Server Error: /customers
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 583, in aggregate
+    arg.default_alias
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\aggregates.py", line 98, in default_alias
+    raise TypeError("Complex expressions require an alias")
+TypeError: Complex expressions require an alias
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 83, in customers
+    average_age = User.objects.aggregate(Avg('age', filter=Q(user__status__eq='customer', user__is_superuser__eq=False)), )
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 585, in aggregate
+    raise TypeError("Complex aggregates require an alias")
+TypeError: Complex aggregates require an alias
+2024-05-01 20:37:09,393 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 20:37:11,259 ERROR Internal Server Error: /customers
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 583, in aggregate
+    arg.default_alias
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\aggregates.py", line 98, in default_alias
+    raise TypeError("Complex expressions require an alias")
+TypeError: Complex expressions require an alias
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 83, in customers
+    average_age = User.objects.aggregate(Avg('age', filter=Q(user__status__eq='customer')))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 585, in aggregate
+    raise TypeError("Complex aggregates require an alias")
+TypeError: Complex aggregates require an alias
+2024-05-01 20:37:12,103 ERROR Internal Server Error: /customers
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 583, in aggregate
+    arg.default_alias
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\aggregates.py", line 98, in default_alias
+    raise TypeError("Complex expressions require an alias")
+TypeError: Complex expressions require an alias
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 83, in customers
+    average_age = User.objects.aggregate(Avg('age', filter=Q(user__status__eq='customer')))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 585, in aggregate
+    raise TypeError("Complex aggregates require an alias")
+TypeError: Complex aggregates require an alias
+2024-05-01 20:37:12,653 ERROR Internal Server Error: /customers
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 583, in aggregate
+    arg.default_alias
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\aggregates.py", line 98, in default_alias
+    raise TypeError("Complex expressions require an alias")
+TypeError: Complex expressions require an alias
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 83, in customers
+    average_age = User.objects.aggregate(Avg('age', filter=Q(user__status__eq='customer')))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 585, in aggregate
+    raise TypeError("Complex aggregates require an alias")
+TypeError: Complex aggregates require an alias
+2024-05-01 20:37:12,869 ERROR Internal Server Error: /customers
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 583, in aggregate
+    arg.default_alias
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\aggregates.py", line 98, in default_alias
+    raise TypeError("Complex expressions require an alias")
+TypeError: Complex expressions require an alias
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 83, in customers
+    average_age = User.objects.aggregate(Avg('age', filter=Q(user__status__eq='customer')))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 585, in aggregate
+    raise TypeError("Complex aggregates require an alias")
+TypeError: Complex aggregates require an alias
+2024-05-01 20:37:13,036 ERROR Internal Server Error: /customers
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 583, in aggregate
+    arg.default_alias
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\aggregates.py", line 98, in default_alias
+    raise TypeError("Complex expressions require an alias")
+TypeError: Complex expressions require an alias
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 83, in customers
+    average_age = User.objects.aggregate(Avg('age', filter=Q(user__status__eq='customer')))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 585, in aggregate
+    raise TypeError("Complex aggregates require an alias")
+TypeError: Complex aggregates require an alias
+2024-05-01 20:37:13,210 ERROR Internal Server Error: /customers
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 583, in aggregate
+    arg.default_alias
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\aggregates.py", line 98, in default_alias
+    raise TypeError("Complex expressions require an alias")
+TypeError: Complex expressions require an alias
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 83, in customers
+    average_age = User.objects.aggregate(Avg('age', filter=Q(user__status__eq='customer')))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 585, in aggregate
+    raise TypeError("Complex aggregates require an alias")
+TypeError: Complex aggregates require an alias
+2024-05-01 20:37:13,374 ERROR Internal Server Error: /customers
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 583, in aggregate
+    arg.default_alias
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\aggregates.py", line 98, in default_alias
+    raise TypeError("Complex expressions require an alias")
+TypeError: Complex expressions require an alias
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 83, in customers
+    average_age = User.objects.aggregate(Avg('age', filter=Q(user__status__eq='customer')))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 585, in aggregate
+    raise TypeError("Complex aggregates require an alias")
+TypeError: Complex aggregates require an alias
+2024-05-01 20:37:13,551 ERROR Internal Server Error: /customers
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 583, in aggregate
+    arg.default_alias
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\aggregates.py", line 98, in default_alias
+    raise TypeError("Complex expressions require an alias")
+TypeError: Complex expressions require an alias
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 83, in customers
+    average_age = User.objects.aggregate(Avg('age', filter=Q(user__status__eq='customer')))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 585, in aggregate
+    raise TypeError("Complex aggregates require an alias")
+TypeError: Complex aggregates require an alias
+2024-05-01 20:37:13,741 ERROR Internal Server Error: /customers
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 583, in aggregate
+    arg.default_alias
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\aggregates.py", line 98, in default_alias
+    raise TypeError("Complex expressions require an alias")
+TypeError: Complex expressions require an alias
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 83, in customers
+    average_age = User.objects.aggregate(Avg('age', filter=Q(user__status__eq='customer')))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 585, in aggregate
+    raise TypeError("Complex aggregates require an alias")
+TypeError: Complex aggregates require an alias
+2024-05-01 20:37:36,627 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 20:38:27,654 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 20:39:56,243 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 20:40:02,644 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 20:40:09,369 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 20:40:24,212 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 21:00:18,215 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 21:06:19,812 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 21:15:31,491 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 21:15:41,636 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 21:15:51,794 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 21:16:29,900 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 21:33:30,009 WARNING OrderCreateView: page not found
+2024-05-01 21:33:30,398 WARNING OrderCreateView: page not found
+2024-05-01 21:33:30,841 INFO created Order object
+2024-05-01 21:33:31,056 WARNING OrderCreateView: user is not authenticated
+2024-05-01 21:33:31,164 WARNING OrderCreateView: user is not authenticated
+2024-05-01 21:33:31,502 WARNING OrderDeleteView: page not found
+2024-05-01 21:33:32,169 WARNING OrderDeleteView: page not found
+2024-05-01 21:33:32,826 WARNING OrderDeleteView: page not found
+2024-05-01 21:33:33,158 WARNING UserOrderListView: page not found
+2024-05-01 21:33:33,163 WARNING ProductDetailView: page not found
+2024-05-01 21:33:33,393 WARNING PurchaseCreateView: page not found
+2024-05-01 21:33:33,850 WARNING PurchaseCreateView: page not found
+2024-05-01 21:33:34,073 WARNING applied promo for 12345 order
+2024-05-01 21:33:34,087 INFO created Purchase object
+2024-05-01 21:33:34,196 WARNING PurchaseCreateView: page not found
+2024-05-01 21:33:34,529 WARNING PurchaseDetailView: page not found
+2024-05-01 21:33:35,196 WARNING PurchaseDetailView: page not found
+2024-05-01 21:33:35,760 WARNING PurchaseDetailView: page not found
+2024-05-01 21:33:36,103 WARNING purchaseListView: page not found
+2024-05-01 21:33:36,789 ERROR Internal Server Error: /add_review/
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\utils\deprecation.py", line 138, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: '__proxy__' object has no attribute 'get'
+2024-05-01 21:33:37,151 INFO created Review object!
+2024-05-01 21:33:37,369 ERROR Internal Server Error: /add_review/
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\utils\deprecation.py", line 138, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: '__proxy__' object has no attribute 'get'
+2024-05-01 21:33:37,931 INFO user successfully authorised!
+2024-05-01 21:33:38,579 WARNING UserDetailView: page not found
+2024-05-01 21:33:39,543 WARNING UserListView: page not found
+2024-05-01 21:33:39,760 INFO user successfully logout!
+2024-05-01 21:33:40,633 WARNING UserOrderListView: page not found
+2024-05-01 21:33:41,185 WARNING UserOrderListView: page not found
+2024-05-01 21:35:41,723 WARNING OrderCreateView: page not found
+2024-05-01 21:35:42,063 WARNING OrderCreateView: page not found
+2024-05-01 21:35:42,503 INFO created Order object
+2024-05-01 21:35:42,720 WARNING OrderCreateView: user is not authenticated
+2024-05-01 21:35:42,828 WARNING OrderCreateView: user is not authenticated
+2024-05-01 21:35:43,154 WARNING OrderDeleteView: page not found
+2024-05-01 21:35:43,806 WARNING OrderDeleteView: page not found
+2024-05-01 21:35:44,455 WARNING OrderDeleteView: page not found
+2024-05-01 21:35:44,781 WARNING UserOrderListView: page not found
+2024-05-01 21:35:44,786 WARNING ProductDetailView: page not found
+2024-05-01 21:35:45,013 WARNING PurchaseCreateView: page not found
+2024-05-01 21:35:45,452 WARNING PurchaseCreateView: page not found
+2024-05-01 21:35:45,672 WARNING applied promo for 12345 order
+2024-05-01 21:35:45,674 INFO created Purchase object
+2024-05-01 21:35:45,783 WARNING PurchaseCreateView: page not found
+2024-05-01 21:35:46,109 WARNING PurchaseDetailView: page not found
+2024-05-01 21:35:46,760 WARNING PurchaseDetailView: page not found
+2024-05-01 21:35:47,301 WARNING PurchaseDetailView: page not found
+2024-05-01 21:35:47,634 WARNING purchaseListView: page not found
+2024-05-01 21:35:48,289 ERROR Internal Server Error: /add_review/
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\utils\deprecation.py", line 138, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: '__proxy__' object has no attribute 'get'
+2024-05-01 21:35:48,518 INFO created Review object!
+2024-05-01 21:35:48,736 ERROR Internal Server Error: /add_review/
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\utils\deprecation.py", line 138, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: '__proxy__' object has no attribute 'get'
+2024-05-01 21:35:49,288 INFO user successfully authorised!
+2024-05-01 21:35:49,931 WARNING UserDetailView: page not found
+2024-05-01 21:35:50,897 WARNING UserListView: page not found
+2024-05-01 21:35:50,898 WARNING Not Found: /users/
+2024-05-01 21:35:51,114 INFO user successfully logout!
+2024-05-01 21:35:51,988 WARNING UserOrderListView: page not found
+2024-05-01 21:35:52,528 WARNING UserOrderListView: page not found
+2024-05-01 21:41:04,896 WARNING OrderCreateView: page not found
+2024-05-01 21:41:04,903 WARNING Not Found: /products/999/order/create/
+2024-05-01 21:41:05,236 WARNING OrderCreateView: page not found
+2024-05-01 21:41:05,236 WARNING Not Found: /products/1/order/create/
+2024-05-01 21:41:05,685 INFO created Order object
+2024-05-01 21:41:05,899 WARNING OrderCreateView: user is not authenticated
+2024-05-01 21:41:06,007 WARNING OrderCreateView: user is not authenticated
+2024-05-01 21:41:06,330 WARNING OrderDeleteView: page not found
+2024-05-01 21:41:06,330 WARNING Not Found: /orders/12345/
+2024-05-01 21:41:06,982 WARNING OrderDeleteView: page not found
+2024-05-01 21:41:06,983 WARNING Not Found: /orders/999/
+2024-05-01 21:41:07,631 WARNING OrderDeleteView: page not found
+2024-05-01 21:41:07,631 WARNING Not Found: /orders/67890/
+2024-05-01 21:41:07,958 WARNING UserOrderListView: page not found
+2024-05-01 21:41:07,959 WARNING Not Found: /user/1/orders/
+2024-05-01 21:41:07,963 WARNING ProductDetailView: page not found
+2024-05-01 21:41:07,963 WARNING Not Found: /products/999/
+2024-05-01 21:41:08,188 WARNING PurchaseCreateView: page not found
+2024-05-01 21:41:08,189 WARNING Not Found: /orders/999/purchase/create/
+2024-05-01 21:41:08,626 WARNING PurchaseCreateView: page not found
+2024-05-01 21:41:08,626 WARNING Not Found: /orders/12345/purchase/create/
+2024-05-01 21:41:08,846 WARNING applied promo for 12345 order
+2024-05-01 21:41:08,848 INFO created Purchase object
+2024-05-01 21:41:08,958 WARNING PurchaseCreateView: page not found
+2024-05-01 21:41:08,958 WARNING Not Found: /orders/12345/purchase/create/
+2024-05-01 21:41:09,282 WARNING PurchaseDetailView: page not found
+2024-05-01 21:41:09,282 WARNING Not Found: /purchases/1/
+2024-05-01 21:41:09,931 WARNING PurchaseDetailView: page not found
+2024-05-01 21:41:09,931 WARNING Not Found: /purchases/999/
+2024-05-01 21:41:10,472 WARNING PurchaseDetailView: page not found
+2024-05-01 21:41:10,472 WARNING Not Found: /purchases/1/
+2024-05-01 21:41:10,800 WARNING purchaseListView: page not found
+2024-05-01 21:41:10,800 WARNING Not Found: /purchases/
+2024-05-01 21:41:11,453 ERROR Internal Server Error: /add_review/
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\utils\deprecation.py", line 138, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: '__proxy__' object has no attribute 'get'
+2024-05-01 21:41:11,684 INFO created Review object!
+2024-05-01 21:41:11,902 ERROR Internal Server Error: /add_review/
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\utils\deprecation.py", line 138, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: '__proxy__' object has no attribute 'get'
+2024-05-01 21:41:12,454 INFO user successfully authorised!
+2024-05-01 21:41:13,105 WARNING UserDetailView: page not found
+2024-05-01 21:41:13,105 WARNING Not Found: /users/1/
+2024-05-01 21:41:13,319 WARNING Not Found: /users/2/
+2024-05-01 21:41:14,071 WARNING UserListView: page not found
+2024-05-01 21:41:14,071 WARNING Not Found: /users/
+2024-05-01 21:41:14,288 INFO user successfully logout!
+2024-05-01 21:41:15,158 WARNING UserOrderListView: page not found
+2024-05-01 21:41:15,159 WARNING Not Found: /user/2/orders/
+2024-05-01 21:41:15,701 WARNING UserOrderListView: page not found
+2024-05-01 21:41:15,701 WARNING Not Found: /user/2/orders/
+2024-05-01 21:42:27,844 WARNING OrderCreateView: page not found
+2024-05-01 21:42:27,850 WARNING Not Found: /products/999/order/create/
+2024-05-01 21:42:28,184 WARNING OrderCreateView: page not found
+2024-05-01 21:42:28,184 WARNING Not Found: /products/1/order/create/
+2024-05-01 21:42:28,627 INFO created Order object
+2024-05-01 21:42:28,842 WARNING OrderCreateView: user is not authenticated
+2024-05-01 21:42:28,950 WARNING OrderCreateView: user is not authenticated
+2024-05-01 21:42:29,273 WARNING OrderDeleteView: page not found
+2024-05-01 21:42:29,274 WARNING Not Found: /orders/12345/
+2024-05-01 21:42:29,926 WARNING OrderDeleteView: page not found
+2024-05-01 21:42:29,926 WARNING Not Found: /orders/999/
+2024-05-01 21:42:30,575 WARNING OrderDeleteView: page not found
+2024-05-01 21:42:30,575 WARNING Not Found: /orders/67890/
+2024-05-01 21:42:30,900 WARNING UserOrderListView: page not found
+2024-05-01 21:42:30,900 WARNING Not Found: /user/1/orders/
+2024-05-01 21:42:30,904 WARNING ProductDetailView: page not found
+2024-05-01 21:42:30,905 WARNING Not Found: /products/999/
+2024-05-01 21:42:31,131 WARNING PurchaseCreateView: page not found
+2024-05-01 21:42:31,131 WARNING Not Found: /orders/999/purchase/create/
+2024-05-01 21:42:31,568 WARNING PurchaseCreateView: page not found
+2024-05-01 21:42:31,569 WARNING Not Found: /orders/12345/purchase/create/
+2024-05-01 21:42:31,787 WARNING applied promo for 12345 order
+2024-05-01 21:42:31,788 INFO created Purchase object
+2024-05-01 21:42:31,898 WARNING PurchaseCreateView: page not found
+2024-05-01 21:42:31,899 WARNING Not Found: /orders/12345/purchase/create/
+2024-05-01 21:42:32,224 WARNING PurchaseDetailView: page not found
+2024-05-01 21:42:32,224 WARNING Not Found: /purchases/1/
+2024-05-01 21:42:32,875 WARNING PurchaseDetailView: page not found
+2024-05-01 21:42:32,875 WARNING Not Found: /purchases/999/
+2024-05-01 21:42:33,415 WARNING PurchaseDetailView: page not found
+2024-05-01 21:42:33,415 WARNING Not Found: /purchases/1/
+2024-05-01 21:42:33,743 WARNING purchaseListView: page not found
+2024-05-01 21:42:33,743 WARNING Not Found: /purchases/
+2024-05-01 21:42:34,396 ERROR Internal Server Error: /add_review/
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\utils\deprecation.py", line 138, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: '__proxy__' object has no attribute 'get'
+2024-05-01 21:42:34,628 INFO created Review object!
+2024-05-01 21:42:34,845 ERROR Internal Server Error: /add_review/
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\utils\deprecation.py", line 138, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: '__proxy__' object has no attribute 'get'
+2024-05-01 21:42:35,392 INFO user successfully authorised!
+2024-05-01 21:42:36,042 WARNING UserDetailView: page not found
+2024-05-01 21:42:36,042 WARNING Not Found: /users/1/
+2024-05-01 21:42:36,259 WARNING Not Found: /users/2/
+2024-05-01 21:42:37,009 WARNING UserListView: page not found
+2024-05-01 21:42:37,009 WARNING Not Found: /users/
+2024-05-01 21:42:37,227 INFO user successfully logout!
+2024-05-01 21:42:38,094 WARNING UserOrderListView: page not found
+2024-05-01 21:42:38,094 WARNING Not Found: /user/2/orders/
+2024-05-01 21:42:38,633 WARNING UserOrderListView: page not found
+2024-05-01 21:42:38,633 WARNING Not Found: /user/2/orders/
+2024-05-01 23:39:27,376 WARNING OrderCreateView: page not found
+2024-05-01 23:39:27,386 WARNING Not Found: /products/999/order/create/
+2024-05-01 23:39:27,820 WARNING OrderCreateView: page not found
+2024-05-01 23:39:27,820 WARNING Not Found: /products/1/order/create/
+2024-05-01 23:39:28,374 INFO created Order object
+2024-05-01 23:39:28,649 WARNING OrderCreateView: user is not authenticated
+2024-05-01 23:39:28,787 WARNING OrderCreateView: user is not authenticated
+2024-05-01 23:39:29,212 WARNING OrderDeleteView: page not found
+2024-05-01 23:39:29,213 WARNING Not Found: /orders/12345/
+2024-05-01 23:39:30,009 WARNING OrderDeleteView: page not found
+2024-05-01 23:39:30,010 WARNING Not Found: /orders/999/
+2024-05-01 23:39:30,849 WARNING OrderDeleteView: page not found
+2024-05-01 23:39:30,850 WARNING Not Found: /orders/67890/
+2024-05-01 23:39:31,255 WARNING UserOrderListView: page not found
+2024-05-01 23:39:31,255 WARNING Not Found: /user/1/orders/
+2024-05-01 23:39:31,262 WARNING ProductDetailView: page not found
+2024-05-01 23:39:31,262 WARNING Not Found: /products/999/
+2024-05-01 23:39:31,580 WARNING PurchaseCreateView: page not found
+2024-05-01 23:39:31,580 WARNING Not Found: /orders/999/purchase/create/
+2024-05-01 23:39:32,201 WARNING PurchaseCreateView: page not found
+2024-05-01 23:39:32,202 WARNING Not Found: /orders/12345/purchase/create/
+2024-05-01 23:39:32,480 WARNING applied promo for 12345 order
+2024-05-01 23:39:32,483 INFO created Purchase object
+2024-05-01 23:39:32,626 WARNING PurchaseCreateView: page not found
+2024-05-01 23:39:32,626 WARNING Not Found: /orders/12345/purchase/create/
+2024-05-01 23:39:33,065 WARNING PurchaseDetailView: page not found
+2024-05-01 23:39:33,065 WARNING Not Found: /purchases/1/
+2024-05-01 23:39:33,905 WARNING PurchaseDetailView: page not found
+2024-05-01 23:39:33,905 WARNING Not Found: /purchases/999/
+2024-05-01 23:39:34,590 WARNING PurchaseDetailView: page not found
+2024-05-01 23:39:34,590 WARNING Not Found: /purchases/1/
+2024-05-01 23:39:35,015 WARNING purchaseListView: page not found
+2024-05-01 23:39:35,015 WARNING Not Found: /purchases/
+2024-05-01 23:39:35,930 ERROR Internal Server Error: /add_review/
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\utils\deprecation.py", line 138, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: '__proxy__' object has no attribute 'get'
+2024-05-01 23:39:36,215 INFO created Review object!
+2024-05-01 23:39:36,484 ERROR Internal Server Error: /add_review/
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\utils\deprecation.py", line 138, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: '__proxy__' object has no attribute 'get'
+2024-05-01 23:39:37,206 INFO user successfully authorised!
+2024-05-01 23:39:38,034 WARNING UserDetailView: page not found
+2024-05-01 23:39:38,034 WARNING Not Found: /users/1/
+2024-05-01 23:39:38,301 WARNING Not Found: /users/2/
+2024-05-01 23:39:39,280 WARNING UserListView: page not found
+2024-05-01 23:39:39,280 WARNING Not Found: /users/
+2024-05-01 23:39:39,545 INFO user successfully logout!
+2024-05-01 23:39:40,646 WARNING UserOrderListView: page not found
+2024-05-01 23:39:40,647 WARNING Not Found: /user/2/orders/
+2024-05-01 23:39:41,337 WARNING UserOrderListView: page not found
+2024-05-01 23:39:41,338 WARNING Not Found: /user/2/orders/
+2024-05-01 23:41:31,914 WARNING OrderCreateView: page not found
+2024-05-01 23:41:31,925 WARNING Not Found: /products/999/order/create/
+2024-05-01 23:41:32,315 WARNING OrderCreateView: page not found
+2024-05-01 23:41:32,316 WARNING Not Found: /products/1/order/create/
+2024-05-01 23:41:32,818 INFO created Order object
+2024-05-01 23:41:33,070 WARNING OrderCreateView: user is not authenticated
+2024-05-01 23:41:33,195 WARNING OrderCreateView: user is not authenticated
+2024-05-01 23:41:33,584 WARNING OrderDeleteView: page not found
+2024-05-01 23:41:33,584 WARNING Not Found: /orders/12345/
+2024-05-01 23:41:34,325 WARNING OrderDeleteView: page not found
+2024-05-01 23:41:34,325 WARNING Not Found: /orders/999/
+2024-05-01 23:41:35,069 WARNING OrderDeleteView: page not found
+2024-05-01 23:41:35,069 WARNING Not Found: /orders/67890/
+2024-05-01 23:41:35,437 WARNING UserOrderListView: page not found
+2024-05-01 23:41:35,437 WARNING Not Found: /user/1/orders/
+2024-05-01 23:41:35,442 WARNING ProductDetailView: page not found
+2024-05-01 23:41:35,442 WARNING Not Found: /products/999/
+2024-05-01 23:41:35,714 WARNING PurchaseCreateView: page not found
+2024-05-01 23:41:35,715 WARNING Not Found: /orders/999/purchase/create/
+2024-05-01 23:41:36,212 WARNING PurchaseCreateView: page not found
+2024-05-01 23:41:36,212 WARNING Not Found: /orders/12345/purchase/create/
+2024-05-01 23:41:36,464 WARNING applied promo for 12345 order
+2024-05-01 23:41:36,466 INFO created Purchase object
+2024-05-01 23:41:36,594 WARNING PurchaseCreateView: page not found
+2024-05-01 23:41:36,595 WARNING Not Found: /orders/12345/purchase/create/
+2024-05-01 23:41:36,967 WARNING PurchaseDetailView: page not found
+2024-05-01 23:41:36,967 WARNING Not Found: /purchases/1/
+2024-05-01 23:41:37,705 WARNING PurchaseDetailView: page not found
+2024-05-01 23:41:37,705 WARNING Not Found: /purchases/999/
+2024-05-01 23:41:38,314 WARNING PurchaseDetailView: page not found
+2024-05-01 23:41:38,315 WARNING Not Found: /purchases/1/
+2024-05-01 23:41:38,687 WARNING purchaseListView: page not found
+2024-05-01 23:41:38,687 WARNING Not Found: /purchases/
+2024-05-01 23:41:39,450 ERROR Internal Server Error: /add_review/
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\utils\deprecation.py", line 138, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: '__proxy__' object has no attribute 'get'
+2024-05-01 23:41:39,722 INFO created Review object!
+2024-05-01 23:41:39,969 ERROR Internal Server Error: /add_review/
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\utils\deprecation.py", line 138, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^
+AttributeError: '__proxy__' object has no attribute 'get'
+2024-05-01 23:41:40,593 INFO user successfully authorised!
+2024-05-01 23:41:41,337 WARNING UserDetailView: page not found
+2024-05-01 23:41:41,337 WARNING Not Found: /users/1/
+2024-05-01 23:41:41,583 WARNING Not Found: /users/2/
+2024-05-01 23:41:42,445 WARNING UserListView: page not found
+2024-05-01 23:41:42,446 WARNING Not Found: /users/
+2024-05-01 23:41:42,695 INFO user successfully logout!
+2024-05-01 23:41:43,693 WARNING UserOrderListView: page not found
+2024-05-01 23:41:43,693 WARNING Not Found: /user/2/orders/
+2024-05-01 23:41:44,363 WARNING UserOrderListView: page not found
+2024-05-01 23:41:44,364 WARNING Not Found: /user/2/orders/
+2024-05-01 23:44:01,465 WARNING OrderCreateView: page not found
+2024-05-01 23:44:01,475 WARNING Not Found: /products/999/order/create/
+2024-05-01 23:44:01,878 WARNING OrderCreateView: page not found
+2024-05-01 23:44:01,879 WARNING Not Found: /products/1/order/create/
+2024-05-01 23:44:02,362 INFO created Order object
+2024-05-01 23:44:02,600 WARNING OrderCreateView: user is not authenticated
+2024-05-01 23:44:02,718 WARNING OrderCreateView: user is not authenticated
+2024-05-01 23:44:03,071 WARNING OrderDeleteView: page not found
+2024-05-01 23:44:03,071 WARNING Not Found: /orders/12345/
+2024-05-01 23:44:03,784 WARNING OrderDeleteView: page not found
+2024-05-01 23:44:03,785 WARNING Not Found: /orders/999/
+2024-05-01 23:44:04,497 WARNING OrderDeleteView: page not found
+2024-05-01 23:44:04,498 WARNING Not Found: /orders/67890/
+2024-05-01 23:44:04,855 WARNING UserOrderListView: page not found
+2024-05-01 23:44:04,855 WARNING Not Found: /user/1/orders/
+2024-05-01 23:44:04,860 WARNING ProductDetailView: page not found
+2024-05-01 23:44:04,860 WARNING Not Found: /products/999/
+2024-05-01 23:44:05,112 WARNING PurchaseCreateView: page not found
+2024-05-01 23:44:05,112 WARNING Not Found: /orders/999/purchase/create/
+2024-05-01 23:44:05,592 WARNING PurchaseCreateView: page not found
+2024-05-01 23:44:05,593 WARNING Not Found: /orders/12345/purchase/create/
+2024-05-01 23:44:05,836 WARNING applied promo for 12345 order
+2024-05-01 23:44:05,838 INFO created Purchase object
+2024-05-01 23:44:05,959 WARNING PurchaseCreateView: page not found
+2024-05-01 23:44:05,959 WARNING Not Found: /orders/12345/purchase/create/
+2024-05-01 23:44:06,319 WARNING PurchaseDetailView: page not found
+2024-05-01 23:44:06,319 WARNING Not Found: /purchases/1/
+2024-05-01 23:44:07,058 WARNING PurchaseDetailView: page not found
+2024-05-01 23:44:07,058 WARNING Not Found: /purchases/999/
+2024-05-01 23:44:07,659 WARNING PurchaseDetailView: page not found
+2024-05-01 23:44:07,659 WARNING Not Found: /purchases/1/
+2024-05-01 23:44:08,019 WARNING purchaseListView: page not found
+2024-05-01 23:44:08,019 WARNING Not Found: /purchases/
+2024-05-01 23:44:09,000 INFO created Review object!
+2024-05-01 23:44:09,838 INFO user successfully authorised!
+2024-05-01 23:44:10,538 WARNING UserDetailView: page not found
+2024-05-01 23:44:10,538 WARNING Not Found: /users/1/
+2024-05-01 23:44:10,776 WARNING Not Found: /users/2/
+2024-05-01 23:44:11,595 WARNING UserListView: page not found
+2024-05-01 23:44:11,595 WARNING Not Found: /users/
+2024-05-01 23:44:11,843 INFO user successfully logout!
+2024-05-01 23:44:12,832 WARNING UserOrderListView: page not found
+2024-05-01 23:44:12,832 WARNING Not Found: /user/2/orders/
+2024-05-01 23:44:13,420 WARNING UserOrderListView: page not found
+2024-05-01 23:44:13,420 WARNING Not Found: /user/2/orders/
+2024-05-01 23:44:31,610 WARNING Not Found: /
+2024-05-01 23:44:40,144 INFO user successfully logout!
+2024-05-01 23:44:40,167 INFO latest article title: title1
+2024-05-01 23:45:08,224 INFO latest article title: title1
+2024-05-01 23:45:20,287 INFO user successfully authorised!
+2024-05-01 23:45:20,309 INFO latest article title: title1
+2024-05-01 23:45:24,149 WARNING Not Found: /admin/l
+2024-05-01 23:45:32,763 ERROR Internal Server Error: /customers
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 84, in customers
+    average_age = User.objects.filter(status='customer', is_superuser=False).aggregate(Avg('age'), Max('age'), Min('age00'))
+                                                                                                               ^^^
+NameError: name 'Min' is not defined
+2024-05-01 23:45:33,400 ERROR Internal Server Error: /customers
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 84, in customers
+    average_age = User.objects.filter(status='customer', is_superuser=False).aggregate(Avg('age'), Max('age'), Min('age00'))
+                                                                                                               ^^^
+NameError: name 'Min' is not defined
+2024-05-01 23:45:48,395 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 23:46:04,228 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 23:46:11,912 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.

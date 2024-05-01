@@ -35,7 +35,7 @@ class ReviewCreateViewTest(TestCase):
         }
         self.invalid_data = {
             'name': '',
-            'rating': 6,  # rating must be between 1 and 5
+            'rating': 6,
             'text': '',
         }
 
@@ -48,23 +48,23 @@ class ReviewCreateViewTest(TestCase):
     def test_get_unauthenticated(self):
         self.client.logout()
         response = self.client.get(reverse('add_review'))
-        self.assertEqual(response.status_code, 302)  # redirected to login page
+        self.assertEqual(response.status_code, 302)
 
     def test_post_authenticated_customer_valid_data(self):
         response = self.client.post(reverse('add_review'), data=self.valid_data)
-        self.assertEqual(response.status_code, 302)  # redirected to 'reviews' page
-        self.assertEqual(Review.objects.count(), 1)  # new review created
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(Review.objects.count(), 1)
 
     def test_post_authenticated_customer_invalid_data(self):
         response = self.client.post(reverse('add_review'), data=self.invalid_data)
-        self.assertEqual(response.status_code, 302)  # redirected to login page
-        self.assertEqual(Review.objects.count(), 0)  # no review created
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(Review.objects.count(), 0)
 
     def test_post_unauthenticated(self):
         self.client.logout()
         response = self.client.post(reverse('add_review'), data=self.valid_data)
-        self.assertEqual(response.status_code, 302)  # redirected to login page
-        self.assertEqual(Review.objects.count(), 0)  # no review created
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(Review.objects.count(), 0)
 
 
 class UserRegistrationViewTestCase(TestCase):
@@ -421,7 +421,6 @@ class UserOrderListViewTestCase(TestCase):
         self.client.login(username='employee', password='password')
         response = self.client.get(reverse('user_orders', kwargs={'pk': self.customer_user.pk}))
         self.assertEqual(response.status_code, 404)
-        self.assertEqual(response.content.decode('utf-8'), 'Page not found')
 
     def test_get_authenticated_customer_own_orders(self):
         self.client.login(username='customer', password='password')

@@ -7,6 +7,8 @@ from django.contrib.auth.views import LoginView
 from django.http import HttpResponse, JsonResponse, HttpResponseNotFound
 from django.shortcuts import render, redirect
 
+from django.utils import timezone
+
 from django.contrib.auth.models import auth
 
 from django.urls import reverse_lazy
@@ -72,6 +74,7 @@ def random_joke(request):
     joke = requests.get(url.format()).json()
     return JsonResponse(joke, safe=False)
 
+
 def profile(request):
     if request.user.is_authenticated and request.user.status == 'customer':
         form = PhoneNumberChangeForm(request.POST or None, instance=request.user)
@@ -81,7 +84,7 @@ def profile(request):
                 return redirect('profile')
         return render(request, 'profile.html', {'form': form})
     logging.warning('profile view: page not found')
-    return HttpResponseNotFound('Page not found')
+    return render(request, 'page_not_found.html', status=404)
 
 
 class ReviewListView(ListView):
@@ -104,7 +107,7 @@ class ReviewCreateView(View):
                 form.save()
                 logging.info('created Review object!')
                 return redirect('reviews')
-        return reverse_lazy('login')
+        return redirect('login')
 
 
 class UserRegistrationView(CreateView):
@@ -164,7 +167,7 @@ class UserListView(View):
                 })
             return JsonResponse(users_data, safe=False)
         logging.warning('UserListView: page not found')
-        return HttpResponseNotFound("Page not found")
+        return render(request, 'page_not_found.html', status=404)
 
 
 class UserDetailView(View):
@@ -182,7 +185,7 @@ class UserDetailView(View):
                 }
                 return JsonResponse(user_data, safe=False)
             logging.warning('UserDetailView: page not found')
-        return HttpResponseNotFound("Page not found")
+        return render(request, 'page_not_found.html', status=404)
 
 
 class ProductListView(ListView):
@@ -257,7 +260,7 @@ class ProductDetailView(DetailView):
             }
             return JsonResponse(product_data)
         logging.warning('ProductDetailView: page not found')
-        return HttpResponseNotFound('page not found')
+        return render(request, 'page_not_found.html', status=404)
 
 
 class OrderCreateView(View):
@@ -272,7 +275,7 @@ class OrderCreateView(View):
             }
             return render(request, 'order_form.html', context)
         logging.warning('OrderCreateView: page not found')
-        return HttpResponseNotFound('page not found')
+        return render(request, 'page_not_found.html', status=404)
 
     def post(self, request, pk, *args, **kwargs):
         if request.user.is_authenticated and request.user.status == "customer" and \
@@ -294,7 +297,7 @@ class OrderCreateView(View):
                         "price": order.price,
                         "promo": order.promo_code,
                         "amount": order.amount,
-                        "date": order.date,
+                        "date": timezone.localtime(order.date),
                         "is_active": order.is_active,
                     }
 
@@ -305,7 +308,7 @@ class OrderCreateView(View):
                 return HttpResponse('There are not enough products in stock to place an order')
         elif request.user.is_authenticated and request.user.status == "employee":
             logging.warning('OrderCreateView: page not found')
-            return HttpResponseNotFound("Page not found")
+            return render(request, 'page_not_found.html', status=404)
         else:
             logging.warning('OrderCreateView: user is not authenticated')
             return HttpResponse('please, login for making order!')
@@ -326,15 +329,15 @@ class OrderListView(View):
                         "price": order.price,
                         "promo": order.promo_code,
                         "amount": order.amount,
-                        "date": order.date,
+                        "date": timezone.localtime(order.date),
                         "is_active": order.is_active,
                     })
                 return JsonResponse(orders_data, safe=False)
             except ObjectDoesNotExist:
                 logging.warning('OrderListView: page not found')
-                return HttpResponseNotFound("Page not found")
+                return render(request, 'page_not_found.html', status=404)
         logging.warning('OrderListView: page not found')
-        return HttpResponseNotFound("Page not found")
+        return render(request, 'page_not_found.html', status=404)
 
 
 class OrderDeleteDetailView(View):
@@ -351,7 +354,7 @@ class OrderDeleteDetailView(View):
                 "price": order.price,
                 "promo": order.promo_code,
                 "amount": order.amount,
-                "date": order.date,
+                "date": timezone.localtime(order.date),
                 "is_active": order.is_active,
             }
             return JsonResponse(order_data, safe=False)
@@ -362,7 +365,7 @@ class OrderDeleteDetailView(View):
             form = OrderDeleteForm()
             return render(request, 'order_detail.html', {'form': form, 'order': order})
         logging.warning('OrderDeleteView: page not found')
-        return HttpResponseNotFound("Page not found")
+        return render(request, 'page_not_found.html', status=404)
 
     def post(self, request, *args, **kwargs):
         if request.user.is_authenticated and request.user.status == "customer" \
@@ -381,7 +384,7 @@ class OrderDeleteDetailView(View):
                         "price": order.price,
                         "promo": order.promo_code,
                         "amount": order.amount,
-                        "date": order.date,
+                        "date": timezone.localtime(order.date),
                         "is_active": order.is_active,
                     }
 
@@ -391,7 +394,7 @@ class OrderDeleteDetailView(View):
                     logging.warning('deleted Order object')
                     return JsonResponse(order_data, safe=False)
         logging.warning('OrderDeleteView: page not found')
-        return HttpResponseNotFound("Page not found")
+        return render(request, 'page_not_found.html', status=404)
 
 
 class UserOrderListView(View):
@@ -413,7 +416,7 @@ class UserOrderListView(View):
                         "price": order.price,
                         "promo": order.promo_code,
                         "amount": order.amount,
-                        "date": order.date,
+                        "date": timezone.localtime(order.date),
                         "is_active": order.is_active,
                     })
                 return JsonResponse(orders_data, safe=False)
@@ -421,7 +424,7 @@ class UserOrderListView(View):
                 logging.warning('UserOrderListView: no orders')
                 return HttpResponse("There are no orders")
         logging.warning('UserOrderListView: page not found')
-        return HttpResponseNotFound("Page not found")
+        return render(request, 'page_not_found.html', status=404)
 
 
 class PurchaseCreateView(View):
@@ -436,7 +439,7 @@ class PurchaseCreateView(View):
             }
             return render(request, 'purchase_form.html', context)
         logging.warning('PurchaseCreateView: page not found')
-        return HttpResponseNotFound('page not found')
+        return render(request, 'page_not_found.html', status=404)
 
     def post(self, request, *args, **kwargs):
         if request.user.is_authenticated and request.user.status == "customer" \
@@ -472,12 +475,12 @@ class PurchaseCreateView(View):
                     "order_id": order.number,
                     "user_id": request.user.id,
                     "town": form.cleaned_data["town"],
-                    "purchase_date": purchase.purchase_date,
+                    "purchase_date": timezone.localtime(purchase.purchase_date),
                     "delivery_date": purchase.delivery_date,
                 }
                 return JsonResponse(purchase_data, safe=False)
         logging.warning('PurchaseCreateView: page not found')
-        return HttpResponseNotFound("Page not found")
+        return render(request, 'page_not_found.html', status=404)
 
 
 class PurchaseListView(View):
@@ -493,15 +496,15 @@ class PurchaseListView(View):
                         "user_id": purchase.order.user.id,
                         "username": purchase.order.user.username,
                         "town": purchase.town,
-                        "purchase_date": purchase.purchase_date,
-                        "delivery_date": purchase.delivery_date,
+                        "purchase_date": timezone.localtime(purchase.purchase_date),
+                        "delivery_date": timezone.localtime(purchase.delivery_date),
                     })
                 return JsonResponse(purchases_data, safe=False)
             except ObjectDoesNotExist:
                 logging.warning('PurchaseListView: page not found')
-                return HttpResponseNotFound("Page not found")
+                return render(request, 'page_not_found.html', status=404)
         logging.warning('purchaseListView: page not found')
-        return HttpResponseNotFound("Page not found")
+        return render(request, 'page_not_found.html', status=404)
 
 
 class PurchaseDetailView(View):
@@ -517,8 +520,8 @@ class PurchaseDetailView(View):
                 "user_id": purchase.order.user.id,
                 "username": purchase.order.user.username,
                 "town": purchase.town,
-                "purchase_date": purchase.purchase_date,
-                "delivery_date": purchase.delivery_date,
+                "purchase_date": timezone.localtime(purchase.purchase_date),
+                "delivery_date": timezone.localtime(purchase.delivery_date),
             }
             return JsonResponse(purchase_data, safe=False)
         elif request.user.is_authenticated and request.user.status == "customer" \
@@ -531,12 +534,12 @@ class PurchaseDetailView(View):
                 "user_id": purchase.order.user.id,
                 "username": purchase.order.user.username,
                 "town": purchase.town,
-                "purchase_date": purchase.purchase_date,
-                "delivery_date": purchase.delivery_date,
+                "purchase_date": timezone.localtime(purchase.purchase_date),
+                "delivery_date": timezone.localtime(purchase.delivery_date),
             }
             return JsonResponse(purchase_data, safe=False)
         logging.warning('PurchaseDetailView: page not found')
-        return HttpResponseNotFound("Page not found")
+        return render(request, 'page_not_found.html', status=404)
 
 
 class PromoListView(View):
@@ -564,6 +567,6 @@ class PickUpPointListView(View):
                     })
                 return JsonResponse(pick_up_points_data, safe=False)
             logging.warning('PickUpPointsListView: no pick up points')
-            return HttpResponse('there are no pick up points')
+            return render(request, 'page_not_found.html', status=404)
         logging.warning('PickUpPointsListView: page not found')
-        return HttpResponseNotFound('page not found')
+        return render(request, 'page_not_found.html', status=404)

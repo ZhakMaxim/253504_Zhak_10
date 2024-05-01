@@ -15,7 +15,9 @@
         </ul>
     {% endfor %}
 
-    <h2>Average Age: {{ average_age }}</h2>
-    <h2>Median Age: {{ median_age }}</h2>
+    <h2>Min Age: {{ average_age.age__min }} years</h2>
+    <h2>Max Age: {{ average_age.age__max }} years</h2>
+    <h2>Average Age: {{ average_age.age__avg }} years</h2>
+    <h2>Median Age: {{ median_age }} years</h2>
 </body>
 </html>
