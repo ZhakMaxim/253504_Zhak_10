@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monthly Sales Volume</title>
+</head>
+<body>
+    <h1>Monthly Sales Volume</h1>
+    {% for image in images %}
+        <img src="data:image/png;base64,{{ image }}" height="500" width="1300">
+    {% endfor %}
+</body>
+</html>

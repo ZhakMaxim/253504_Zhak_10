@@ -17,11 +17,12 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, re_path
-from SparkleMart import views
 
 from django.conf import settings
 from django.conf.urls.static import static
 
+from SparkleMart import views
+from SparkleMart import statistic_views
 
 
 urlpatterns = [
@@ -33,14 +34,22 @@ urlpatterns = [
     path('vacancies/', views.vacancies, name='vacancies'),
     path('reviews/', views.ReviewListView.as_view(), name='reviews'),
     path('add_review/', views.ReviewCreateView.as_view(), name='add_review'),
-    path('privacy-policy', views.privacy_policy, name='privacy_policy'),
-    path('random_fact', views.random_fact, name='random_fact'),
-    path('random_joke', views.random_joke, name='random_joke'),
+    path('privacy-policy/', views.privacy_policy, name='privacy_policy'),
+    path('random_fact/', views.random_fact, name='random_fact'),
+    path('random_joke/', views.random_joke, name='random_joke'),
+
+    path('price_list', statistic_views.price_list, name='price_list'),
+    path('customers', statistic_views.customers, name='customers'),
+    path('demand_analysis', statistic_views.demand_analysis, name='demand_analysis'),
+    path('monthly_sales_volume', statistic_views.monthly_sales_volume, name='monthly_sales_volume'),
+    path('yearly_sales', statistic_views.yearly_sales, name='yearly_sales'),
+    path('linear_trend', statistic_views.linear_sales_trend, name='linear_trend'),
 
     path('admin/', admin.site.urls),
     path('register/', views.UserRegistrationView.as_view(), name='register'),
     path('login/', views.UserAuthorizationView.as_view(), name='login'),
     path('logout/', views.UserLogoutView.as_view(), name='logout'),
+    path('profile/', views.profile, name='profile'),
     path('products/', views.ProductListView.as_view(), name='products'),
     re_path(r'products/(?P<pk>\d+)/$', views.ProductDetailView.as_view(), name='product'),
     re_path(r'products/(?P<pk>\d+)/order/create/', views.OrderCreateView.as_view(), name='create_order'),

@@ -16,33 +16,44 @@ from django.core.exceptions import ObjectDoesNotExist
 
 import requests
 
+import logging
+
+logging.basicConfig(level=logging.INFO, filename='logs.log', filemode='a',
+                    format='%(asctime)s %(levelname)s %(message)s')
+
 def home(request):
     latest_article = Article.objects.latest('published_date')
+    logging.info(f'latest article title: {latest_article.title}')
     return render(request, 'home.html', {'latest_article': latest_article})
 
 
 def about_company(request):
     company_info = CompanyInfo.objects.first()
+    logging.info(f'company info: {company_info.text}')
     return render(request, 'about_company.html', {'company_info': company_info})
 
 
 def news(request):
     all_news = Article.objects.all()
+    logging.info(f'news titles: {[new.title for new in all_news]}')
     return render(request, 'news.html', {'all_news': all_news})
 
 
 def terms(request):
     all_terms = Term.objects.all()
+    logging.info(f'terms questions: {[term.question for term in all_terms]}')
     return render(request, 'terms.html', {'all_terms': all_terms})
 
 
 def contacts(request):
     all_contacts = Contact.objects.all()
+    logging.info(f'contacts names: {[contact.name for contact in all_contacts]}')
     return render(request, 'contacts.html', {'all_contacts': all_contacts})
 
 
 def vacancies(request):
     all_vacancies = Vacancy.objects.all()
+    logging.info(f'vacancies titles: {[vacancy.name for vacancy in all_vacancies]}')
     return render(request, 'vacancies.html', {'all_vacancies': all_vacancies})
 
 
@@ -61,6 +72,17 @@ def random_joke(request):
     joke = requests.get(url.format()).json()
     return JsonResponse(joke, safe=False)
 
+def profile(request):
+    if request.user.is_authenticated and request.user.status == 'customer':
+        form = PhoneNumberChangeForm(request.POST or None, instance=request.user)
+        if request.method == 'POST':
+            if form.is_valid():
+                form.save()
+                return redirect('profile')
+        return render(request, 'profile.html', {'form': form})
+    logging.warning('profile view: page not found')
+    return HttpResponseNotFound('Page not found')
+
 
 class ReviewListView(ListView):
     model = Review
@@ -70,18 +92,19 @@ class ReviewListView(ListView):
 
 class ReviewCreateView(View):
     def get(self, request, **kwargs):
-        if request.user.is_authenticated and request.user.status == 'customer':
+        if request.user.is_authenticated and request.user.status == 'customer' and not request.user.is_superuser:
             form = ReviewForm(request.GET)
             return render(request, 'add_review.html', {'form': form})
         return redirect('login')
 
     def post(self, request, *args, **kwargs):
-        if request.user.is_authenticated and request.user.status == 'customer':
+        if request.user.is_authenticated and request.user.status == 'customer' and not request.user.is_superuser:
             form = ReviewForm(request.POST)
             if form.is_valid():
                 form.save()
+                logging.info('created Review object!')
                 return redirect('reviews')
-        return redirect('login')
+        return reverse_lazy('login')
 
 
 class UserRegistrationView(CreateView):
@@ -102,10 +125,11 @@ class UserRegistrationView(CreateView):
     template_name = 'register.html'
     success_url = '/login/'
 
-    # def form_valid(self, form):
-    #     user = form.save(commit=False)
-    #     user.save()
-    #     return super().form_valid(form)
+    def form_valid(self, form):
+        user = form.save(commit=False)
+        user.save()
+        logging.info('user successfully registered!')
+        return super().form_valid(form)
 
 
 class UserAuthorizationView(LoginView):
@@ -113,6 +137,7 @@ class UserAuthorizationView(LoginView):
     template_name = 'login.html'
 
     def get_success_url(self):
+        logging.info('user successfully authorised!')
         return reverse_lazy('home')
 
 
@@ -120,6 +145,7 @@ class UserLogoutView(View):
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated:
             auth.logout(request)
+            logging.info('user successfully logout!')
         return redirect('home')
 
 
@@ -137,6 +163,7 @@ class UserListView(View):
                     "email": user.email,
                 })
             return JsonResponse(users_data, safe=False)
+        logging.warning('UserListView: page not found')
         return HttpResponseNotFound("Page not found")
 
 
@@ -154,6 +181,7 @@ class UserDetailView(View):
                     "email": user.email,
                 }
                 return JsonResponse(user_data, safe=False)
+            logging.warning('UserDetailView: page not found')
         return HttpResponseNotFound("Page not found")
 
 
@@ -228,6 +256,7 @@ class ProductDetailView(DetailView):
                 'producer_id': product.producer.id,
             }
             return JsonResponse(product_data)
+        logging.warning('ProductDetailView: page not found')
         return HttpResponseNotFound('page not found')
 
 
@@ -242,6 +271,7 @@ class OrderCreateView(View):
                 'form': form,
             }
             return render(request, 'order_form.html', context)
+        logging.warning('OrderCreateView: page not found')
         return HttpResponseNotFound('page not found')
 
     def post(self, request, pk, *args, **kwargs):
@@ -270,11 +300,14 @@ class OrderCreateView(View):
 
                     product.amount -= amount
                     product.save()
+                    logging.info('created Order object')
                     return JsonResponse(order_data, safe=False)
                 return HttpResponse('There are not enough products in stock to place an order')
         elif request.user.is_authenticated and request.user.status == "employee":
+            logging.warning('OrderCreateView: page not found')
             return HttpResponseNotFound("Page not found")
         else:
+            logging.warning('OrderCreateView: user is not authenticated')
             return HttpResponse('please, login for making order!')
 
 
@@ -298,7 +331,9 @@ class OrderListView(View):
                     })
                 return JsonResponse(orders_data, safe=False)
             except ObjectDoesNotExist:
+                logging.warning('OrderListView: page not found')
                 return HttpResponseNotFound("Page not found")
+        logging.warning('OrderListView: page not found')
         return HttpResponseNotFound("Page not found")
 
 
@@ -326,6 +361,7 @@ class OrderDeleteDetailView(View):
             order = Order.objects.get(pk=pk, user_id=request.user.id)
             form = OrderDeleteForm()
             return render(request, 'order_detail.html', {'form': form, 'order': order})
+        logging.warning('OrderDeleteView: page not found')
         return HttpResponseNotFound("Page not found")
 
     def post(self, request, *args, **kwargs):
@@ -352,7 +388,9 @@ class OrderDeleteDetailView(View):
                     order.product.amount += order.amount
                     order.product.save()
                     order.delete()
+                    logging.warning('deleted Order object')
                     return JsonResponse(order_data, safe=False)
+        logging.warning('OrderDeleteView: page not found')
         return HttpResponseNotFound("Page not found")
 
 
@@ -380,7 +418,9 @@ class UserOrderListView(View):
                     })
                 return JsonResponse(orders_data, safe=False)
             else:
+                logging.warning('UserOrderListView: no orders')
                 return HttpResponse("There are no orders")
+        logging.warning('UserOrderListView: page not found')
         return HttpResponseNotFound("Page not found")
 
 
@@ -395,6 +435,7 @@ class PurchaseCreateView(View):
                 'form': form,
             }
             return render(request, 'purchase_form.html', context)
+        logging.warning('PurchaseCreateView: page not found')
         return HttpResponseNotFound('page not found')
 
     def post(self, request, *args, **kwargs):
@@ -425,6 +466,8 @@ class PurchaseCreateView(View):
                 order.is_active = False
                 order.save()
 
+                logging.info('created Purchase object')
+
                 purchase_data = {
                     "order_id": order.number,
                     "user_id": request.user.id,
@@ -433,6 +476,7 @@ class PurchaseCreateView(View):
                     "delivery_date": purchase.delivery_date,
                 }
                 return JsonResponse(purchase_data, safe=False)
+        logging.warning('PurchaseCreateView: page not found')
         return HttpResponseNotFound("Page not found")
 
 
@@ -454,7 +498,9 @@ class PurchaseListView(View):
                     })
                 return JsonResponse(purchases_data, safe=False)
             except ObjectDoesNotExist:
+                logging.warning('PurchaseListView: page not found')
                 return HttpResponseNotFound("Page not found")
+        logging.warning('purchaseListView: page not found')
         return HttpResponseNotFound("Page not found")
 
 
@@ -489,6 +535,7 @@ class PurchaseDetailView(View):
                 "delivery_date": purchase.delivery_date,
             }
             return JsonResponse(purchase_data, safe=False)
+        logging.warning('PurchaseDetailView: page not found')
         return HttpResponseNotFound("Page not found")
 
 
@@ -516,5 +563,7 @@ class PickUpPointListView(View):
                         'address': pick_up_point.address,
                     })
                 return JsonResponse(pick_up_points_data, safe=False)
+            logging.warning('PickUpPointsListView: no pick up points')
             return HttpResponse('there are no pick up points')
+        logging.warning('PickUpPointsListView: page not found')
         return HttpResponseNotFound('page not found')

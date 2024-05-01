@@ -14,5 +14,8 @@
             <p>{{ review_item.date }}</p>
         </div>
     {% endfor %}
+    <form action="{% url 'add_review' %}" method="get">
+        <button type="submit">Leave a Review</button>
+    </form>
 </body>
 </html>

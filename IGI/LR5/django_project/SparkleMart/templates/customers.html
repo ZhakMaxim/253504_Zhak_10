@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customers</title>
+</head>
+<body>
+    <h1>Customers by Town</h1>
+    {% for town, customers in towns_with_customer_count.items %}
+        <h2>{{ town }}</h2>
+        <ul>
+            {% for customer in customers %}
+                <li>{{ customer }}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+</body>
+</html>

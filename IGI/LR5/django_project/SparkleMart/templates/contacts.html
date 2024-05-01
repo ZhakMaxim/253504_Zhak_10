@@ -11,8 +11,8 @@
             <h2>{{ contact_item.name }}</h2>
             <p>{{ contact_item.description }}</p>
             <img src="{{ contact_item.photo.url }}" alt="{{ contact_item.name }}">
-            <p>Phone: {{ contact_item.phone }}</p>
-            <p>Email: {{ contact_item.email }}</p>
+            <p>Phone: {{ contact_item.user.phone_number }}</p>
+            <p>Email: {{ contact_item.user.email }}</p>
         </div>
     {% endfor %}
 </body>

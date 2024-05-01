@@ -1,0 +1,1718 @@
+
+2024-04-30 21:58:30,335 INFO user successfully logout!
+2024-04-30 21:58:30,346 INFO latest article title: title1
+2024-04-30 21:58:40,589 INFO user successfully authorised!
+2024-04-30 21:58:40,605 INFO latest article title: title1
+2024-04-30 21:59:00,979 INFO created Review object!
+2024-04-30 22:00:29,437 INFO created Order object
+2024-04-30 22:01:12,715 WARNING UserOrderListView: page not found
+2024-04-30 22:01:12,715 WARNING Not Found: /user/4/orders/
+2024-04-30 22:01:13,033 WARNING UserOrderListView: page not found
+2024-04-30 22:01:13,033 WARNING Not Found: /user/4/orders/
+2024-04-30 22:01:16,793 WARNING UserOrderListView: page not found
+2024-04-30 22:01:16,793 WARNING Not Found: /user/5/orders/
+2024-04-30 22:01:17,146 WARNING UserOrderListView: page not found
+2024-04-30 22:01:17,147 WARNING Not Found: /user/5/orders/
+2024-04-30 22:01:28,758 WARNING UserOrderListView: page not found
+2024-04-30 22:01:28,758 WARNING Not Found: /user/2/orders/
+2024-04-30 22:01:29,141 WARNING UserOrderListView: page not found
+2024-04-30 22:01:29,141 WARNING Not Found: /user/2/orders/
+2024-04-30 22:50:17,694 WARNING Not Found: /
+2024-04-30 22:50:23,463 WARNING Not Found: /price_list
+2024-04-30 22:51:13,536 INFO D:\253504_Zhak_10\IGI\LR5\django_project\HouseholdChemicalsStore\urls.py changed, reloading.
+2024-04-30 23:15:51,378 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-04-30 23:18:43,789 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-04-30 23:23:27,888 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-04-30 23:23:30,823 ERROR Internal Server Error: /price_list
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 11, in price_list
+    return render(request, 'price_list.html', {'products': product_list, 'prices': price_list_})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\defaulttags.py", line 839, in do_for
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'for' statements should use the format 'for x in y': for i, j in products, prices
+2024-04-30 23:27:25,419 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-04-30 23:32:52,170 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-04-30 23:33:03,067 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 00:21:24,020 ERROR Internal Server Error: /price_list
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 14, in price_list
+    return render(request, 'price_list.html', {'category_product_prices': category_product_prices})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' list' from 'Price list'
+2024-05-01 00:21:31,426 ERROR Internal Server Error: /price_list
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 14, in price_list
+    return render(request, 'price_list.html', {'category_product_prices': category_product_prices})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' list' from 'Price list'
+2024-05-01 00:21:31,833 ERROR Internal Server Error: /price_list
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 14, in price_list
+    return render(request, 'price_list.html', {'category_product_prices': category_product_prices})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' list' from 'Price list'
+2024-05-01 00:21:32,045 ERROR Internal Server Error: /price_list
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 14, in price_list
+    return render(request, 'price_list.html', {'category_product_prices': category_product_prices})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' list' from 'Price list'
+2024-05-01 00:21:32,269 ERROR Internal Server Error: /price_list
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 14, in price_list
+    return render(request, 'price_list.html', {'category_product_prices': category_product_prices})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' list' from 'Price list'
+2024-05-01 00:21:32,454 ERROR Internal Server Error: /price_list
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 14, in price_list
+    return render(request, 'price_list.html', {'category_product_prices': category_product_prices})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' list' from 'Price list'
+2024-05-01 00:21:32,632 ERROR Internal Server Error: /price_list
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 14, in price_list
+    return render(request, 'price_list.html', {'category_product_prices': category_product_prices})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' list' from 'Price list'
+2024-05-01 00:21:32,807 ERROR Internal Server Error: /price_list
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 14, in price_list
+    return render(request, 'price_list.html', {'category_product_prices': category_product_prices})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' list' from 'Price list'
+2024-05-01 00:21:32,994 ERROR Internal Server Error: /price_list
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 14, in price_list
+    return render(request, 'price_list.html', {'category_product_prices': category_product_prices})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' list' from 'Price list'
+2024-05-01 00:21:33,944 ERROR Internal Server Error: /price_list
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 14, in price_list
+    return render(request, 'price_list.html', {'category_product_prices': category_product_prices})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' list' from 'Price list'
+2024-05-01 00:21:34,131 ERROR Internal Server Error: /price_list
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 14, in price_list
+    return render(request, 'price_list.html', {'category_product_prices': category_product_prices})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' list' from 'Price list'
+2024-05-01 00:21:34,317 ERROR Internal Server Error: /price_list
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 14, in price_list
+    return render(request, 'price_list.html', {'category_product_prices': category_product_prices})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' list' from 'Price list'
+2024-05-01 00:22:12,036 ERROR Internal Server Error: /price_list
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 14, in price_list
+    return render(request, 'price_list.html', {'category_product_prices': category_product_prices})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' list' from 'Price list'
+2024-05-01 00:22:12,530 ERROR Internal Server Error: /price_list
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 14, in price_list
+    return render(request, 'price_list.html', {'category_product_prices': category_product_prices})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' list' from 'Price list'
+2024-05-01 00:25:25,458 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 00:26:17,766 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 00:26:26,457 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 00:26:29,994 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 00:26:32,582 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 00:27:05,432 INFO D:\253504_Zhak_10\IGI\LR5\django_project\HouseholdChemicalsStore\urls.py changed, reloading.
+2024-05-01 00:27:11,149 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 00:28:10,447 INFO user successfully registered!
+2024-05-01 00:28:10,581 INFO user successfully authorised!
+2024-05-01 00:28:10,586 INFO latest article title: title1
+2024-05-01 00:28:32,327 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-01 00:28:37,560 INFO user successfully logout!
+2024-05-01 00:28:37,571 INFO latest article title: title1
+2024-05-01 00:28:49,204 INFO user successfully authorised!
+2024-05-01 00:28:49,221 INFO latest article title: title1
+2024-05-01 00:29:04,249 INFO user successfully logout!
+2024-05-01 00:29:04,256 INFO latest article title: title1
+2024-05-01 00:29:39,268 ERROR ValidationError
+NoneType: None
+2024-05-01 00:29:39,293 ERROR Internal Server Error: /register/
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\views\generic\edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py", line 130, in form_valid
+    user.save()
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\models.py", line 83, in save
+    raise ValidationError("Error while creating user")
+django.core.exceptions.ValidationError: ['Error while creating user']
+2024-05-01 00:29:50,345 ERROR ValidationError
+NoneType: None
+2024-05-01 00:29:50,362 ERROR Internal Server Error: /register/
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\views\generic\edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py", line 130, in form_valid
+    user.save()
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\models.py", line 83, in save
+    raise ValidationError("Error while creating user")
+django.core.exceptions.ValidationError: ['Error while creating user']
+2024-05-01 00:29:57,130 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-01 00:30:07,741 ERROR ValidationError
+NoneType: None
+2024-05-01 00:30:07,769 ERROR Internal Server Error: /register/
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\views\generic\edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py", line 130, in form_valid
+    user.save()
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\models.py", line 83, in save
+    raise ValidationError("Error while creating user")
+django.core.exceptions.ValidationError: ['Error while creating user']
+2024-05-01 00:30:19,815 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-01 00:30:27,223 INFO user successfully registered!
+2024-05-01 00:30:27,363 WARNING Not Found: /register/login/
+2024-05-01 00:30:34,157 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-01 00:32:05,514 INFO user successfully registered!
+2024-05-01 00:32:15,161 INFO user successfully authorised!
+2024-05-01 00:32:15,179 INFO latest article title: title1
+2024-05-01 00:32:49,782 INFO created Order object
+2024-05-01 00:33:01,316 INFO created Order object
+2024-05-01 00:33:09,236 INFO created Order object
+2024-05-01 00:33:17,014 INFO created Order object
+2024-05-01 00:33:23,644 INFO created Order object
+2024-05-01 00:33:34,882 WARNING OrderDeleteView: page not found
+2024-05-01 00:33:34,882 WARNING Not Found: /orders/1/
+2024-05-01 00:34:06,977 INFO created Purchase object
+2024-05-01 00:34:14,253 INFO created Purchase object
+2024-05-01 00:34:19,701 INFO created Purchase object
+2024-05-01 00:34:25,318 INFO created Purchase object
+2024-05-01 00:34:30,215 INFO created Purchase object
+2024-05-01 00:34:33,248 WARNING PurchaseCreateView: page not found
+2024-05-01 00:34:33,248 WARNING Not Found: /orders/7/purchase/create/
+2024-05-01 00:34:40,389 INFO user successfully logout!
+2024-05-01 00:34:40,397 INFO latest article title: title1
+2024-05-01 00:34:55,913 INFO user successfully authorised!
+2024-05-01 00:34:55,929 INFO latest article title: title1
+2024-05-01 00:35:05,862 INFO created Order object
+2024-05-01 00:35:13,525 INFO created Order object
+2024-05-01 00:35:21,389 INFO created Order object
+2024-05-01 00:35:29,061 INFO created Order object
+2024-05-01 00:35:34,724 INFO created Order object
+2024-05-01 00:35:40,939 INFO created Order object
+2024-05-01 00:36:01,837 INFO created Purchase object
+2024-05-01 00:36:08,341 INFO created Purchase object
+2024-05-01 00:36:13,998 INFO created Purchase object
+2024-05-01 00:36:19,234 INFO created Purchase object
+2024-05-01 00:36:24,053 INFO created Purchase object
+2024-05-01 00:36:30,750 INFO created Purchase object
+2024-05-01 00:36:33,557 WARNING PurchaseCreateView: page not found
+2024-05-01 00:36:33,557 WARNING Not Found: /orders/13/purchase/create/
+2024-05-01 00:36:37,536 INFO user successfully logout!
+2024-05-01 00:36:37,543 INFO latest article title: title1
+2024-05-01 00:36:51,009 INFO user successfully authorised!
+2024-05-01 00:36:51,024 INFO latest article title: title1
+2024-05-01 00:37:00,973 INFO created Order object
+2024-05-01 00:37:07,444 INFO created Order object
+2024-05-01 00:37:14,908 INFO created Order object
+2024-05-01 00:37:22,278 INFO created Order object
+2024-05-01 00:37:29,166 INFO created Order object
+2024-05-01 00:37:34,524 INFO created Order object
+2024-05-01 00:37:40,021 INFO created Order object
+2024-05-01 00:38:07,763 WARNING PurchaseCreateView: page not found
+2024-05-01 00:38:07,763 WARNING Not Found: /orders/10/purchase/create/
+2024-05-01 00:38:10,732 WARNING OrderDeleteView: page not found
+2024-05-01 00:38:10,732 WARNING Not Found: /orders/10/
+2024-05-01 00:38:16,444 WARNING OrderDeleteView: page not found
+2024-05-01 00:38:16,444 WARNING Not Found: /orders/11/
+2024-05-01 00:38:20,167 WARNING OrderDeleteView: page not found
+2024-05-01 00:38:20,167 WARNING Not Found: /orders/12/
+2024-05-01 00:38:39,160 INFO created Purchase object
+2024-05-01 00:38:46,157 INFO created Purchase object
+2024-05-01 00:38:51,468 INFO created Purchase object
+2024-05-01 00:38:57,060 INFO created Purchase object
+2024-05-01 00:39:03,037 INFO created Purchase object
+2024-05-01 00:39:09,180 INFO created Purchase object
+2024-05-01 00:39:15,924 INFO created Purchase object
+2024-05-01 00:39:19,499 WARNING PurchaseCreateView: page not found
+2024-05-01 00:39:19,500 WARNING Not Found: /orders/20/purchase/create/
+2024-05-01 00:39:57,748 WARNING OrderDeleteView: page not found
+2024-05-01 00:39:57,748 WARNING Not Found: /orders/2/
+2024-05-01 00:39:59,187 INFO user successfully logout!
+2024-05-01 00:39:59,194 INFO latest article title: title1
+2024-05-01 00:42:21,775 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 00:43:22,726 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 00:44:05,858 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 00:44:15,688 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 00:45:07,232 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 00:45:21,298 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 00:46:24,572 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 00:51:38,914 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 00:52:32,995 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 00:54:43,911 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 00:55:58,937 ERROR Internal Server Error: /customers
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 28, in customers
+    users = [purchase.user.name for purchase in purchases_by_town]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 28, in <listcomp>
+    users = [purchase.user.name for purchase in purchases_by_town]
+             ^^^^^^^^^^^^^^^^^^
+AttributeError: 'User' object has no attribute 'name'
+2024-05-01 00:56:40,338 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 00:57:28,900 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 00:57:52,372 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 00:57:54,585 ERROR Internal Server Error: /customers
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 28, in customers
+    users = [purchase.user.username for purchase in purchases_by_town]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'Purchase' object is not iterable
+2024-05-01 00:59:59,082 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:00:00,252 ERROR Internal Server Error: /customers
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 28, in customers
+    users = [purchase.user.username for purchase in purchases_by_town if purchase.user.username not in users]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 28, in <listcomp>
+    users = [purchase.user.username for purchase in purchases_by_town if purchase.user.username not in users]
+                                                                                                       ^^^^^
+NameError: cannot access free variable 'users' where it is not associated with a value in enclosing scope
+2024-05-01 01:00:00,778 ERROR Internal Server Error: /customers
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 28, in customers
+    users = [purchase.user.username for purchase in purchases_by_town if purchase.user.username not in users]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 28, in <listcomp>
+    users = [purchase.user.username for purchase in purchases_by_town if purchase.user.username not in users]
+                                                                                                       ^^^^^
+NameError: cannot access free variable 'users' where it is not associated with a value in enclosing scope
+2024-05-01 01:00:21,572 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:00:56,371 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:02:42,222 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:03:45,388 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:05:38,696 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:05:58,093 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:06:15,260 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:06:36,674 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:07:24,127 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:08:16,773 INFO D:\253504_Zhak_10\IGI\LR5\django_project\HouseholdChemicalsStore\urls.py changed, reloading.
+2024-05-01 01:10:18,470 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:10:38,912 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:11:17,942 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:11:35,618 ERROR Internal Server Error: /demand_analysis
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 2142, in add_fields
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1808, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1709, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'order' into field. Choices are: amount, date, is_active, number, price, product, product_id, promo_code, purchase, user, user_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 53, in demand_analysis
+    least_demanded = least_demanded_product()
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 44, in least_demanded_product
+    products_with_purchase_count = Order.objects.values('order').annotate(purchase_count=Count('order'))
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1298, in values
+    clone = self._values(*fields, **expressions)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1293, in _values
+    clone.query.set_values(fields)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 2437, in set_values
+    self.add_fields(field_names, True)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 2175, in add_fields
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'order' into field. Choices are: amount, date, is_active, number, price, product, product_id, promo_code, purchase, user, user_id
+2024-05-01 01:11:57,268 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:12:35,197 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:15:44,634 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:17:12,799 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:17:55,174 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:17:59,860 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:18:02,486 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:18:34,265 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:18:39,995 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:19:25,450 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:19:33,247 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:20:41,503 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:20:54,724 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:21:04,304 ERROR Internal Server Error: /demand_analysis
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 55, in demand_analysis
+    return render(request, 'demand_analysis.html', {'most_demanded': most_demanded, 'least_demanded': least_demanded})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '[0].name' from 'most_demanded[0].name'
+2024-05-01 01:22:28,399 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:23:04,360 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:26:07,609 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:26:14,295 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:28:59,772 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:29:31,813 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:30:01,453 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:30:09,224 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:32:22,252 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:32:35,289 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:32:50,027 WARNING Not Found: /monthly_sales_volyme
+2024-05-01 01:32:56,432 ERROR Internal Server Error: /monthly_sales_volume
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: monthly_sales_volume() takes 0 positional arguments but 1 was given
+2024-05-01 01:33:13,832 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:33:15,234 ERROR Internal Server Error: /monthly_sales_volume
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\utils\deprecation.py", line 138, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 636, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1421, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1439, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1446, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1404, in build_filter
+    arg, value = filter_expr
+    ^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+2024-05-01 01:35:21,516 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:37:13,685 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:37:27,757 ERROR Internal Server Error: /monthly_sales_volume
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\utils\deprecation.py", line 138, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 636, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1421, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1439, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1446, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1404, in build_filter
+    arg, value = filter_expr
+    ^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+2024-05-01 01:38:37,044 ERROR Internal Server Error: /monthly_sales_volume
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\utils\deprecation.py", line 138, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 636, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1421, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1439, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1446, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1404, in build_filter
+    arg, value = filter_expr
+    ^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+2024-05-01 01:39:10,188 ERROR Internal Server Error: /monthly_sales_volume
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\utils\deprecation.py", line 138, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\middleware\clickjacking.py", line 27, in process_response
+    if response.get("X-Frame-Options") is not None:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 636, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1421, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1439, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1446, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1404, in build_filter
+    arg, value = filter_expr
+    ^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+2024-05-01 01:43:22,558 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:43:45,950 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:43:53,766 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:43:56,748 ERROR Internal Server Error: /monthly_sales_volume
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\utils\deprecation.py", line 138, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\middleware\clickjacking.py", line 34, in process_response
+    response.headers["X-Frame-Options"] = self.get_xframe_options_value(
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'headers'
+2024-05-01 01:44:34,193 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:44:38,418 ERROR Internal Server Error: /monthly_sales_volume
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\utils\deprecation.py", line 138, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\middleware\clickjacking.py", line 34, in process_response
+    response.headers["X-Frame-Options"] = self.get_xframe_options_value(
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'collections.defaultdict' object has no attribute 'headers'
+2024-05-01 01:44:52,701 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:44:54,042 ERROR Internal Server Error: /monthly_sales_volume
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\utils\deprecation.py", line 138, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\middleware\clickjacking.py", line 34, in process_response
+    response.headers["X-Frame-Options"] = self.get_xframe_options_value(
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'headers'
+2024-05-01 01:45:15,125 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:45:16,407 ERROR Internal Server Error: /monthly_sales_volume
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\utils\deprecation.py", line 138, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\middleware\clickjacking.py", line 34, in process_response
+    response.headers["X-Frame-Options"] = self.get_xframe_options_value(
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'headers'
+2024-05-01 01:45:30,258 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:46:05,074 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:46:07,561 ERROR Internal Server Error: /monthly_sales_volume
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\utils\deprecation.py", line 138, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\middleware\clickjacking.py", line 34, in process_response
+    response.headers["X-Frame-Options"] = self.get_xframe_options_value(
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'collections.defaultdict' object has no attribute 'headers'
+2024-05-01 01:46:19,365 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:46:20,582 ERROR Internal Server Error: /monthly_sales_volume
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\utils\deprecation.py", line 138, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\middleware\clickjacking.py", line 34, in process_response
+    response.headers["X-Frame-Options"] = self.get_xframe_options_value(
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'collections.defaultdict' object has no attribute 'headers'
+2024-05-01 01:46:46,053 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:46:50,729 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:47:26,767 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:47:43,075 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:48:15,909 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:50:50,113 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:51:01,779 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:51:23,763 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:51:37,478 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:51:59,632 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:53:30,451 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:53:41,068 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:54:02,077 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:54:23,179 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:55:20,623 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:55:37,753 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:55:41,312 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:55:44,865 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:55:48,783 ERROR Internal Server Error: /monthly_sales_volume
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 112, in monthly_sales_volume
+    plot_monthly_sales()
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 84, in plot_monthly_sales
+    labels = list(sales.keys())
+                  ^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'keys'
+2024-05-01 01:57:11,207 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:57:12,412 ERROR Internal Server Error: /monthly_sales_volume
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 114, in monthly_sales_volume
+    plot_monthly_sales()
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 86, in plot_monthly_sales
+    labels = list(sales.keys())
+                  ^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'keys'
+2024-05-01 01:59:22,235 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 01:59:26,613 ERROR Internal Server Error: /monthly_sales_volume
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 114, in monthly_sales_volume
+    plot_monthly_sales()
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 86, in plot_monthly_sales
+    labels = list(sales.keys())
+                  ^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'keys'
+2024-05-01 02:01:09,536 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:01:16,998 ERROR Internal Server Error: /monthly_sales_volume
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 126, in monthly_sales_volume
+    return render(request, 'monthly_sales.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'get_chart_image' not found. 'get_chart_image' is not a valid view function or pattern name.
+2024-05-01 02:03:48,855 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:04:14,148 ERROR Internal Server Error: /monthly_sales_volume
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 127, in monthly_sales_volume
+    return render(request, 'monthly_sales.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'get_chart_image' not found. 'get_chart_image' is not a valid view function or pattern name.
+2024-05-01 02:06:42,650 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:08:07,361 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:08:40,378 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:15:45,570 ERROR Internal Server Error: /monthly_sales_volume
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 112, in monthly_sales_volume
+    return render(request, 'monthly_sales.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\defaulttags.py", line 853, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\defaulttags.py", line 1482, in do_with
+    extra_context = token_kwargs(remaining_bits, parser, support_legacy=True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 1116, in token_kwargs
+    kwargs[key] = parser.compile_filter(value)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\base.py", line 673, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse some characters: media|/||add:'monthly_sales_volume_'|add:month|add:'.png'
+2024-05-01 02:19:21,807 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:23:27,661 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:25:16,522 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:34:30,651 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:35:36,447 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:37:03,319 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:37:39,803 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:38:19,460 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:41:08,603 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:41:13,358 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:41:58,684 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:42:17,635 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:42:25,940 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:42:45,258 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:42:58,790 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:44:00,090 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:44:21,890 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:45:23,948 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:45:29,597 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:46:06,853 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:47:05,470 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:49:31,561 INFO D:\253504_Zhak_10\IGI\LR5\django_project\HouseholdChemicalsStore\urls.py changed, reloading.
+2024-05-01 02:50:18,241 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:51:11,896 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:51:15,445 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:51:23,137 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:55:44,129 INFO D:\253504_Zhak_10\IGI\LR5\django_project\HouseholdChemicalsStore\urls.py changed, reloading.
+2024-05-01 02:56:04,260 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:57:36,791 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 02:57:54,051 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 03:08:30,817 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 03:08:37,793 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 03:09:13,589 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 03:09:47,257 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 03:10:20,079 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 03:11:02,311 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 03:11:10,032 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 03:12:05,960 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 03:12:13,856 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 03:12:57,611 ERROR Internal Server Error: /linear_trend
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 163, in linear_sales_trend
+    return render(request, 'linear_trend', {'image': url})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: linear_trend
+2024-05-01 03:13:16,264 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 03:13:16,660 ERROR Internal Server Error: /linear_trend
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 163, in linear_sales_trend
+    return render(request, 'linear_trend.html', {'image': url})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: linear_trend
+2024-05-01 03:15:06,804 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 03:15:30,392 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 03:15:53,808 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 03:16:05,780 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 03:19:24,934 INFO latest article title: title1
+2024-05-01 03:20:20,988 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 03:20:31,137 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 03:20:44,336 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 03:20:56,658 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 03:21:05,646 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 03:21:19,900 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 03:23:27,949 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-01 03:23:32,660 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
