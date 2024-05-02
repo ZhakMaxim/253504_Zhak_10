@@ -21,18 +21,17 @@ from .models import *
 def most_popular_category():
     category_purchases = Order.objects.values('product__category__name').annotate(
         purchase_count=Count('product__category__name')).order_by('-purchase_count')
-    print(category_purchases)
 
     most_popular_category_ = category_purchases.first()
 
     return most_popular_category_
 
+
 def most_profitable_category():
-    product_type_profit = Product.objects.annotate(
-        total_profit=Sum('orders__price')).values('category__name', 'total_profit').order_by('-total_profit')
+    category_profit = Category.objects.values('name').annotate(
+        total_profit=Sum('products__orders__price')).order_by('-total_profit')
 
-    most_profitable_product_cat = product_type_profit.first()
-
+    most_profitable_product_cat = category_profit.first()
     return most_profitable_product_cat
 
 
@@ -70,8 +69,10 @@ def customers(request):
             customers_info = []
             for purchase in purchases_by_town:
                 customer = purchase.user.username
+
                 total_purchase_amount = Purchase.objects.filter(user=purchase.user).aggregate(
                     total_amount=Sum('order__price'))['total_amount'] or 0
+
                 customers_info.append((customer, total_purchase_amount))
             towns_with_customers_info[town] = list(set(customers_info))
 
@@ -81,7 +82,8 @@ def customers(request):
         for customer in customers_:
             ages.append(customer.age)
 
-        age_data = User.objects.filter(status='customer', is_superuser=False).aggregate(Avg('age'), Max('age'), Min('age'))
+        age_data = User.objects.filter(status='customer', is_superuser=False).aggregate(Avg('age'), Max('age'),
+                                                                                        Min('age'))
         median_age = median(ages)
 
         return render(request, 'customers.html', {'towns_with_customers_info': towns_with_customers_info,
@@ -93,19 +95,19 @@ def customers(request):
 
 
 def most_demanded_product():
-    products_with_sold_count = Order.objects.values('product').annotate(sold_count=Sum('amount'))
+    products_with_sold_count = Purchase.objects.values('order__product').annotate(sold_count=Sum('order__amount'))
 
     most_demanded_product_ = max(products_with_sold_count, key=lambda x: x['sold_count'])
 
-    return Product.objects.get(pk=most_demanded_product_['product']), most_demanded_product_['sold_count']
+    return Product.objects.get(pk=most_demanded_product_['order__product']), most_demanded_product_['sold_count']
 
 
 def least_demanded_product():
-    products_with_sold_count = Order.objects.values('product').annotate(sold_count=Sum('amount'))
+    products_with_sold_count = Purchase.objects.values('order__product').annotate(sold_count=Sum('order__amount'))
 
     least_demanded_product_ = min(products_with_sold_count, key=lambda x: x['sold_count'])
 
-    return Product.objects.get(pk=least_demanded_product_['product']), least_demanded_product_['sold_count']
+    return Product.objects.get(pk=least_demanded_product_['order__product']), least_demanded_product_['sold_count']
 
 
 def demand_analysis(request):
@@ -116,19 +118,23 @@ def demand_analysis(request):
                                                         'most_demanded_sold': most_demanded[1],
                                                         'least_demanded': least_demanded[0],
                                                         'least_demanded_sold': least_demanded[1],
-                                                        'most_demanded_profit': most_demanded[0].price * most_demanded[1],
-                                                        'least_demanded_profit': least_demanded[0].price * least_demanded[1]})
+                                                        'most_demanded_profit': most_demanded[0].price * most_demanded[
+                                                            1],
+                                                        'least_demanded_profit': least_demanded[0].price *
+                                                                                 least_demanded[1]})
+
     return render(request, 'page_not_found.html', status=404)
 
 
 def monthly_sales():
-    sales_volume = Order.objects.annotate(month=TruncMonth('date')).values('product__category__name', 'month').annotate(
-        total_sales=Sum('amount')).order_by('product__category__name', 'month')
+    sales_volume = Purchase.objects.annotate(month=TruncMonth('purchase_date')). \
+        values('order__product__category__name', 'month'). \
+        annotate(total_sales=Sum('order__amount')).order_by('order__product__category__name', 'month')
 
     monthly_sales_ = {}
     for item in sales_volume:
         month = item['month'].strftime('%Y-%m')
-        category = item['product__category__name']
+        category = item['order__product__category__name']
         total_sales = item['total_sales']
 
         if month not in monthly_sales_:
@@ -178,9 +184,9 @@ def monthly_sales_volume(request):
 
 def yearly_sales_report(year):
     purchases = Purchase.objects.filter(purchase_date__year=year)
-    total_sales_per_purchase = purchases.annotate(total_sales=Sum('order__price')).values_list('total_sales', flat=True)
-    total_sales_for_year = sum(total_sales_per_purchase)
-    return total_sales_for_year
+    total_sales_per_purchase = purchases.aggregate(total_sales=Sum('order__price'))
+
+    return total_sales_per_purchase['total_sales']
 
 
 def yearly_sales_trend():
@@ -202,7 +208,7 @@ def linear_sales_trend(request):
         years, sales = yearly_sales_trend()
 
         trend_line = np.polyfit(years, sales, 1)
-        trend_line_fn = np.poly1d(trend_line)
+        trend_line_fn = np.poly1d(trend_line)  # 3.653e-11x + 1330
 
         next_year = years[-1] + 1
         next_sales = trend_line_fn(next_year)

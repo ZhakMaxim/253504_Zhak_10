@@ -3195,3 +3195,990 @@ NameError: name 'Min' is not defined
 2024-05-01 23:45:48,395 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
 2024-05-01 23:46:04,228 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
 2024-05-01 23:46:11,912 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 18:19:46,571 INFO user successfully logout!
+2024-05-02 18:19:46,583 INFO latest article title: title1
+2024-05-02 18:19:51,050 WARNING Not Found: /price_list
+2024-05-02 18:19:51,533 WARNING Not Found: /price_list
+2024-05-02 18:19:57,715 INFO latest article title: title1
+2024-05-02 18:20:11,627 INFO user successfully authorised!
+2024-05-02 18:20:11,640 INFO latest article title: title1
+2024-05-02 18:20:15,977 INFO user successfully logout!
+2024-05-02 18:20:15,984 INFO latest article title: title1
+2024-05-02 18:20:18,270 WARNING Not Found: /price_list
+2024-05-02 18:20:18,801 WARNING Not Found: /price_list
+2024-05-02 18:20:20,876 WARNING Not Found: /price_list
+2024-05-02 18:20:21,459 WARNING Not Found: /price_list
+2024-05-02 18:20:21,686 WARNING Not Found: /price_list
+2024-05-02 18:20:21,934 WARNING Not Found: /price_list
+2024-05-02 18:20:54,236 WARNING Not Found: /price_list
+2024-05-02 18:21:14,201 WARNING Not Found: /customers
+2024-05-02 18:21:14,797 WARNING Not Found: /customers
+2024-05-02 18:22:06,975 INFO user successfully logout!
+2024-05-02 18:22:06,983 INFO latest article title: title1
+2024-05-02 18:22:14,901 INFO latest article title: title1
+2024-05-02 18:22:19,970 WARNING Not Found: /linear_trend
+2024-05-02 18:22:27,463 INFO user successfully authorised!
+2024-05-02 18:22:27,475 INFO latest article title: title1
+2024-05-02 18:23:07,217 WARNING Not Found: /yearly_sales
+2024-05-02 18:23:07,867 WARNING Not Found: /yearly_sales
+2024-05-02 18:33:14,484 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-02 18:33:55,706 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-02 18:34:08,686 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-02 18:34:15,353 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-02 18:34:38,766 INFO user successfully logout!
+2024-05-02 18:34:38,777 INFO latest article title: title1
+2024-05-02 18:34:50,790 WARNING Not Found: /price_list
+2024-05-02 18:34:51,169 WARNING Not Found: /price_list
+2024-05-02 18:35:03,432 INFO user successfully authorised!
+2024-05-02 18:35:03,444 INFO latest article title: title1
+2024-05-02 18:35:13,314 INFO created Order object
+2024-05-02 18:35:54,601 ERROR Internal Server Error: /orders/27/
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py", line 395, in post
+    order.product.save()
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\base.py", line 812, in save
+    self.save_base(
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\base.py", line 863, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\base.py", line 976, in _save_table
+    updated = self._do_update(
+              ^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\base.py", line 1040, in _do_update
+    return filtered._update(values) > 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1212, in _update
+    query.add_update_fields(values)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\subqueries.py", line 113, in add_update_fields
+    val = val.resolve_expression(self, allow_joins=False, for_save=True)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\expressions.py", line 681, in resolve_expression
+    lhs = self.lhs.resolve_expression(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\expressions.py", line 809, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1957, in resolve_ref
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1808, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1709, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'product.amount' into field. Choices are: amount, category, id, name, orders, price, producer, producer_id
+2024-05-02 18:36:14,045 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\views.py changed, reloading.
+2024-05-02 18:36:17,019 WARNING deleted Order object
+2024-05-02 18:39:34,970 INFO user successfully logout!
+2024-05-02 18:39:34,979 INFO latest article title: title1
+2024-05-02 18:39:43,310 INFO user successfully authorised!
+2024-05-02 18:39:43,322 INFO latest article title: title1
+2024-05-02 18:41:35,174 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 20:20:40,255 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 20:20:44,848 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 20:20:47,514 INFO user successfully logout!
+2024-05-02 20:20:47,525 INFO latest article title: title1
+2024-05-02 20:20:50,785 WARNING Not Found: /price_list
+2024-05-02 20:20:51,296 WARNING Not Found: /price_list
+2024-05-02 20:21:01,019 INFO user successfully authorised!
+2024-05-02 20:21:01,032 INFO latest article title: title1
+2024-05-02 20:28:51,902 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 20:29:58,254 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 20:30:59,381 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 20:31:03,951 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 20:31:07,284 ERROR Internal Server Error: /price_list
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 52, in price_list
+    most_profitable_category_ = most_profitable_category()
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 36, in most_profitable_category
+    print(most_profitable_product_cat)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'most_profitable_product_cat_profit' is not defined
+2024-05-02 20:31:28,615 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 20:31:37,483 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 20:31:45,615 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 20:32:07,130 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 20:32:08,342 ERROR Internal Server Error: /price_list
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 51, in price_list
+    most_profitable_category_ = most_profitable_category()
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 35, in most_profitable_category
+    print(most_profitable_product_cat.price)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Category' object has no attribute 'price'
+2024-05-02 20:32:21,241 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 20:32:34,380 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 20:32:58,735 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 20:33:24,330 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 20:33:45,747 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 20:34:12,255 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 20:34:14,061 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 20:34:24,998 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 20:34:41,206 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 20:36:47,163 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 20:54:18,838 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 20:54:45,379 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 20:54:47,343 ERROR Internal Server Error: /demand_analysis
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 115, in demand_analysis
+    most_demanded = most_demanded_product()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 97, in most_demanded_product
+    products_with_sold_count_ = Purchase.objects.values('order__product').annotate(sold_count=Sum('amount'))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1575, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1623, in _annotate
+    clone.query.add_annotation(
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1119, in add_annotation
+    annotation = annotation.resolve_expression(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\aggregates.py", line 64, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\expressions.py", line 920, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\expressions.py", line 809, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1957, in resolve_ref
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1808, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1709, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'amount' into field. Choices are: delivery_date, id, order, order_id, purchase_date, town, user, user_id
+2024-05-02 20:55:01,570 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 20:55:31,729 INFO user successfully authorised!
+2024-05-02 20:55:31,738 INFO latest article title: title1
+2024-05-02 20:55:36,116 INFO user successfully logout!
+2024-05-02 20:55:36,123 INFO latest article title: title1
+2024-05-02 20:55:47,044 INFO user successfully authorised!
+2024-05-02 20:55:47,057 INFO latest article title: title1
+2024-05-02 20:55:55,328 INFO created Order object
+2024-05-02 20:56:01,181 INFO user successfully logout!
+2024-05-02 20:56:01,189 INFO latest article title: title1
+2024-05-02 20:56:11,924 INFO user successfully authorised!
+2024-05-02 20:56:11,937 INFO latest article title: title1
+2024-05-02 20:56:37,428 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 20:56:40,304 ERROR Internal Server Error: /demand_analysis
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 112, in demand_analysis
+    if request.user.is_authenticated and request.user.is_superuser:
+                        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 99, in most_demanded_product
+KeyError: 'product'
+2024-05-02 20:57:02,250 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 20:57:03,769 ERROR Internal Server Error: /demand_analysis
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 113, in demand_analysis
+    most_demanded = most_demanded_product()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 96, in most_demanded_product
+    products_with_sold_count = Purchase.objects.values(product='order__product').annotate(sold_count=Sum('order__amount'))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1298, in values
+    clone = self._values(*fields, **expressions)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1291, in _values
+    clone = clone.annotate(**expressions)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1575, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1585, in _annotate
+    self._validate_values_are_expressions(
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1936, in _validate_values_are_expressions
+    raise TypeError(
+TypeError: QuerySet.annotate() received non-expression(s): order__product.
+2024-05-02 20:57:04,455 ERROR Internal Server Error: /demand_analysis
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 113, in demand_analysis
+    most_demanded = most_demanded_product()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 96, in most_demanded_product
+    products_with_sold_count = Purchase.objects.values(product='order__product').annotate(sold_count=Sum('order__amount'))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1298, in values
+    clone = self._values(*fields, **expressions)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1291, in _values
+    clone = clone.annotate(**expressions)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1575, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1585, in _annotate
+    self._validate_values_are_expressions(
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1936, in _validate_values_are_expressions
+    raise TypeError(
+TypeError: QuerySet.annotate() received non-expression(s): order__product.
+2024-05-02 20:57:20,681 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 20:58:30,077 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 20:58:37,454 ERROR Internal Server Error: /demand_analysis
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 114, in demand_analysis
+    most_demanded = most_demanded_product()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 101, in most_demanded_product
+    return Product.objects.get(pk=most_demanded_product_['order__product']), most_demanded_product_['sold_count']
+                                  ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+KeyError: 'order__product'
+2024-05-02 20:59:09,398 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 20:59:10,749 ERROR Internal Server Error: /demand_analysis
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 114, in demand_analysis
+    most_demanded = most_demanded_product()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 101, in most_demanded_product
+    return Product.objects.get(pk=most_demanded_product_['product']), most_demanded_product_['sold_count']
+                                  ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'product'
+2024-05-02 20:59:15,916 ERROR Internal Server Error: /demand_analysis
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 114, in demand_analysis
+    most_demanded = most_demanded_product()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 101, in most_demanded_product
+    return Product.objects.get(pk=most_demanded_product_['name']), most_demanded_product_['sold_count']
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'product'
+2024-05-02 20:59:16,217 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 20:59:23,958 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 20:59:25,422 ERROR Internal Server Error: /demand_analysis
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 115, in demand_analysis
+    most_demanded = most_demanded_product()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 102, in most_demanded_product
+    return Product.objects.get(pk=most_demanded_product_['name']), most_demanded_product_['sold_count']
+                                  ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+KeyError: 'name'
+2024-05-02 21:00:10,422 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:00:23,489 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:00:24,795 ERROR Internal Server Error: /demand_analysis
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 116, in demand_analysis
+    most_demanded = most_demanded_product()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 103, in most_demanded_product
+    return Product.objects.get(pk=most_demanded_product_['order__product']), most_demanded_product_['sold_count']
+                                  ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+KeyError: 'order__product'
+2024-05-02 21:00:58,554 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:00:59,706 ERROR Internal Server Error: /demand_analysis
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 116, in demand_analysis
+    most_demanded = most_demanded_product()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 100, in most_demanded_product
+    most_demanded_product_ = products_with_sold_count.values('order__product').aggregate(Max('sold_count'))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 590, in aggregate
+    query.add_annotation(aggregate_expr, alias, is_summary=True)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1119, in add_annotation
+    annotation = annotation.resolve_expression(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\aggregates.py", line 64, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\expressions.py", line 920, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\expressions.py", line 809, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1943, in resolve_ref
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot aggregate over the 'sold_count' alias. Use annotate() to promote it.
+2024-05-02 21:01:27,197 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:01:28,464 ERROR Internal Server Error: /demand_analysis
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 116, in demand_analysis
+    most_demanded = most_demanded_product()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 100, in most_demanded_product
+    most_demanded_product_ = products_with_sold_count.values('order__product').annotate(Max('sold_count'))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1575, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1623, in _annotate
+    clone.query.add_annotation(
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1119, in add_annotation
+    annotation = annotation.resolve_expression(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\aggregates.py", line 80, in resolve_expression
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot compute Max('sold_count'): 'sold_count' is an aggregate
+2024-05-02 21:01:40,297 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:01:55,282 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:02:01,965 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:02:03,211 ERROR Internal Server Error: /demand_analysis
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 116, in demand_analysis
+    most_demanded = most_demanded_product()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 100, in most_demanded_product
+    most_demanded_product_ = products_with_sold_count.objects.aggregate(Max('sold_count'))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'objects'
+2024-05-02 21:02:08,771 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:02:10,127 ERROR Internal Server Error: /demand_analysis
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 116, in demand_analysis
+    most_demanded = most_demanded_product()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 103, in most_demanded_product
+    return Product.objects.get(pk=most_demanded_product_['order__product']), most_demanded_product_['sold_count']
+                                  ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+KeyError: 'order__product'
+2024-05-02 21:03:35,986 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:03:48,007 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:03:49,301 ERROR Internal Server Error: /demand_analysis
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 2142, in add_fields
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1808, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1709, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword '' into field. Choices are: delivery_date, id, order, order_id, purchase_date, town, user, user_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 116, in demand_analysis
+    most_demanded = most_demanded_product()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 100, in most_demanded_product
+    most_demanded_product_ = products_with_sold_count.values('').aggregate(Max('sold_count'))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1298, in values
+    clone = self._values(*fields, **expressions)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1293, in _values
+    clone.query.set_values(fields)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 2437, in set_values
+    self.add_fields(field_names, True)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 2175, in add_fields
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword '' into field. Choices are: delivery_date, id, order, order_id, purchase_date, town, user, user_id
+2024-05-02 21:03:58,974 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:04:01,675 ERROR Internal Server Error: /demand_analysis
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 116, in demand_analysis
+    most_demanded = most_demanded_product()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 100, in most_demanded_product
+    most_demanded_product_ = products_with_sold_count.values('order').aggregate(Max('sold_count'))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 590, in aggregate
+    query.add_annotation(aggregate_expr, alias, is_summary=True)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1119, in add_annotation
+    annotation = annotation.resolve_expression(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\aggregates.py", line 64, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\expressions.py", line 920, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\expressions.py", line 809, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1943, in resolve_ref
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot aggregate over the 'sold_count' alias. Use annotate() to promote it.
+2024-05-02 21:04:02,565 ERROR Internal Server Error: /demand_analysis
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 116, in demand_analysis
+    most_demanded = most_demanded_product()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 100, in most_demanded_product
+    most_demanded_product_ = products_with_sold_count.values('order').aggregate(Max('sold_count'))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 590, in aggregate
+    query.add_annotation(aggregate_expr, alias, is_summary=True)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1119, in add_annotation
+    annotation = annotation.resolve_expression(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\aggregates.py", line 64, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\expressions.py", line 920, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\expressions.py", line 809, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1943, in resolve_ref
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot aggregate over the 'sold_count' alias. Use annotate() to promote it.
+2024-05-02 21:04:14,273 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:04:15,459 ERROR Internal Server Error: /demand_analysis
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 116, in demand_analysis
+    most_demanded = most_demanded_product()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 100, in most_demanded_product
+    most_demanded_product_ = products_with_sold_count.values('order__product').aggregate(Max('sold_count'))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 590, in aggregate
+    query.add_annotation(aggregate_expr, alias, is_summary=True)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1119, in add_annotation
+    annotation = annotation.resolve_expression(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\aggregates.py", line 64, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\expressions.py", line 920, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\expressions.py", line 809, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1943, in resolve_ref
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot aggregate over the 'sold_count' alias. Use annotate() to promote it.
+2024-05-02 21:04:16,131 ERROR Internal Server Error: /demand_analysis
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 116, in demand_analysis
+    most_demanded = most_demanded_product()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 100, in most_demanded_product
+    most_demanded_product_ = products_with_sold_count.values('order__product').aggregate(Max('sold_count'))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 590, in aggregate
+    query.add_annotation(aggregate_expr, alias, is_summary=True)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1119, in add_annotation
+    annotation = annotation.resolve_expression(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\aggregates.py", line 64, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\expressions.py", line 920, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\expressions.py", line 809, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1943, in resolve_ref
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot aggregate over the 'sold_count' alias. Use annotate() to promote it.
+2024-05-02 21:06:57,039 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:07:21,869 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:07:26,527 ERROR Internal Server Error: /demand_analysis
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 114, in demand_analysis
+    least_demanded = least_demanded_product()
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 108, in least_demanded_product
+    return Product.objects.get(pk=least_demanded_product_['product']), least_demanded_product_['sold_count']
+                                  ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'product'
+2024-05-02 21:07:36,162 ERROR Internal Server Error: /demand_analysis
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 114, in demand_analysis
+    least_demanded = least_demanded_product()
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 108, in least_demanded_product
+    return Product.objects.get(pk=least_demanded_product_['order__product']), least_demanded_product_['sold_count']
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'product'
+2024-05-02 21:07:36,172 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:17:22,492 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:18:57,730 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:18:58,958 ERROR Internal Server Error: /monthly_sales_volume
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 147, in monthly_sales_volume
+    monthly_sales_ = monthly_sales()
+                     ^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 131, in monthly_sales
+    total_sales = item['total_sales']
+                  ~~~~^^^^^^^^^^^^^^^
+KeyError: 'total_sales'
+2024-05-02 21:22:06,431 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:22:09,216 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:22:14,858 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:22:18,498 ERROR Internal Server Error: /monthly_sales_volume
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 153, in monthly_sales_volume
+    monthly_sales_ = monthly_sales()
+                     ^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 128, in monthly_sales
+    sales_volume = Purchase.objects.annotate(month=TruncMonth('date')).values('order__product__category__name', 'month').annotate(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1575, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1623, in _annotate
+    clone.query.add_annotation(
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1119, in add_annotation
+    annotation = annotation.resolve_expression(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\functions\datetime.py", line 273, in resolve_expression
+    copy = super().resolve_expression(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\expressions.py", line 920, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\expressions.py", line 809, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1957, in resolve_ref
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1808, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1709, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'date' into field. Choices are: delivery_date, id, order, order_id, purchase_date, town, user, user_id
+2024-05-02 21:22:28,239 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:22:36,010 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:22:39,659 ERROR Internal Server Error: /monthly_sales_volume
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 153, in monthly_sales_volume
+    monthly_sales_ = monthly_sales()
+                     ^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 128, in monthly_sales
+    sales_volume = Purchase.objects.annotate(month=TruncMonth('purchase_date')).values('order__product__category__name', 'month').annotate(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1575, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 1623, in _annotate
+    clone.query.add_annotation(
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1119, in add_annotation
+    annotation = annotation.resolve_expression(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\aggregates.py", line 64, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\expressions.py", line 920, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\expressions.py", line 809, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1957, in resolve_ref
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1808, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\sql\query.py", line 1709, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'amount' into field. Choices are: delivery_date, id, month, order, order_id, purchase_date, town, user, user_id
+2024-05-02 21:22:56,775 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:26:23,730 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:27:02,268 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:27:53,528 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:27:57,699 WARNING Not Found: /yearly_sales
+2024-05-02 21:27:58,532 WARNING Not Found: /yearly_sales
+2024-05-02 21:28:05,013 INFO terms questions: []
+2024-05-02 21:29:14,252 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:29:16,270 ERROR Internal Server Error: /linear_trend
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 203, in linear_sales_trend
+    years, sales = yearly_sales_trend()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 193, in yearly_sales_trend
+    sales = yearly_sales_report(year)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 183, in yearly_sales_report
+    total_sales_for_year = sum(total_sales_per_purchase)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported operand type(s) for +: 'int' and 'tuple'
+2024-05-02 21:29:25,042 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:29:43,513 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:29:45,669 ERROR Internal Server Error: /linear_trend
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 203, in linear_sales_trend
+    years, sales = yearly_sales_trend()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 193, in yearly_sales_trend
+    sales = yearly_sales_report(year)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 182, in yearly_sales_report
+    print(total_sales_per_purchase)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 373, in __repr__
+    return "<%s %r>" % (self.__class__.__name__, data)
+                                                 ^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\base.py", line 586, in __repr__
+    return "<%s: %s>" % (self.__class__.__name__, self)
+                                                  ^^^^
+TypeError: __str__ returned non-string (type Order)
+2024-05-02 21:30:11,909 ERROR Internal Server Error: /linear_trend
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 203, in linear_sales_trend
+    years, sales = yearly_sales_trend()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 193, in yearly_sales_trend
+    sales = yearly_sales_report(year)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 182, in yearly_sales_report
+    print(total_sales_per_purchase)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 373, in __repr__
+    return "<%s %r>" % (self.__class__.__name__, data)
+                                                 ^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\base.py", line 586, in __repr__
+    return "<%s: %s>" % (self.__class__.__name__, self)
+                                                  ^^^^
+TypeError: __str__ returned non-string (type Order)
+2024-05-02 21:30:54,647 ERROR Internal Server Error: /linear_trend
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 203, in linear_sales_trend
+    years, sales = yearly_sales_trend()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 193, in yearly_sales_trend
+    sales = yearly_sales_report(year)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 182, in yearly_sales_report
+    print(total_sales_per_purchase)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 373, in __repr__
+    return "<%s %r>" % (self.__class__.__name__, data)
+                                                 ^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\base.py", line 586, in __repr__
+    return "<%s: %s>" % (self.__class__.__name__, self)
+                                                  ^^^^
+TypeError: __str__ returned non-string (type Order)
+2024-05-02 21:31:25,440 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:32:20,164 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:32:43,588 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:33:13,261 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:34:08,412 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:34:14,075 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:34:18,101 ERROR Internal Server Error: /linear_trend
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 205, in linear_sales_trend
+    years, sales = yearly_sales_trend()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 195, in yearly_sales_trend
+    sales = yearly_sales_report(year)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 183, in yearly_sales_report
+    total_sales_per_purchase = purchases.aggregate(total_sales=Sum('order__price')).values_list('total_sales', flat=True)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'values_list'
+2024-05-02 21:34:25,555 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:34:27,835 ERROR Internal Server Error: /linear_trend
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 205, in linear_sales_trend
+    years, sales = yearly_sales_trend()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 195, in yearly_sales_trend
+    sales = yearly_sales_report(year)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 185, in yearly_sales_report
+    total_sales_for_year = sum(total_sales_per_purchase)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+2024-05-02 21:34:44,134 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:35:17,665 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:35:49,918 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:35:52,246 ERROR Internal Server Error: /linear_trend
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 204, in linear_sales_trend
+    years, sales = yearly_sales_trend()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 194, in yearly_sales_trend
+    sales = yearly_sales_report(year)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 183, in yearly_sales_report
+    total_sales_per_purchase = purchases.aggreagate(Sum('order__price'))
+                               ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'aggreagate'
+2024-05-02 21:36:11,706 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:36:23,978 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:36:26,953 ERROR Internal Server Error: /linear_trend
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 204, in linear_sales_trend
+    years, sales = yearly_sales_trend()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 194, in yearly_sales_trend
+    sales = yearly_sales_report(year)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 183, in yearly_sales_report
+    total_sales_per_purchase = purchases.aggreagate(total_sales=Sum('order__price'))
+                               ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'aggreagate'
+2024-05-02 21:36:57,280 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:36:59,277 ERROR Internal Server Error: /linear_trend
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 205, in linear_sales_trend
+    years, sales = yearly_sales_trend()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 195, in yearly_sales_trend
+    sales = yearly_sales_report(year)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 184, in yearly_sales_report
+    print(total_sales_per_purchase)
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\query.py", line 373, in __repr__
+    return "<%s %r>" % (self.__class__.__name__, data)
+                                                 ^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\db\models\base.py", line 586, in __repr__
+    return "<%s: %s>" % (self.__class__.__name__, self)
+                                                  ^^^^
+TypeError: __str__ returned non-string (type Order)
+2024-05-02 21:37:09,294 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:37:11,492 ERROR Internal Server Error: /linear_trend
+Traceback (most recent call last):
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PyCharm\PycharmProjects\django_project\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 205, in linear_sales_trend
+    years, sales = yearly_sales_trend()
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 195, in yearly_sales_trend
+    sales = yearly_sales_report(year)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py", line 185, in yearly_sales_report
+    total_sales_for_year = sum(total_sales_per_purchase)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+2024-05-02 21:37:32,377 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:37:47,934 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:38:29,388 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:38:45,040 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:39:31,441 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:39:53,158 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:39:56,942 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.
+2024-05-02 21:40:49,583 INFO D:\253504_Zhak_10\IGI\LR5\django_project\SparkleMart\statistic_views.py changed, reloading.

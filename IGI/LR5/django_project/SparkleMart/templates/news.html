@@ -10,7 +10,7 @@
         <div>
             <h2>{{ news_item.title }}</h2>
             <p>{{ news_item.content }}</p>
-            <img src="{{ news_item.image.url }}" alt="{{ news_item.title }}">
+            <img src="{{ news_item.image.url }}" alt="{{ news_item.title }}" height="500" width="500">
             <p>{{ news_item.published_date }}</p>
         </div>
     {% endfor %}

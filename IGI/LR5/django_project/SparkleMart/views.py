@@ -4,7 +4,7 @@ from .models import *
 from .forms import *
 
 from django.contrib.auth.views import LoginView
-from django.http import HttpResponse, JsonResponse, HttpResponseNotFound
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 
 from django.utils import timezone
@@ -15,6 +15,8 @@ from django.urls import reverse_lazy
 
 from django.views.generic import *
 from django.core.exceptions import ObjectDoesNotExist
+
+from django.db.models import F
 
 import requests
 
@@ -388,7 +390,8 @@ class OrderDeleteDetailView(View):
                         "is_active": order.is_active,
                     }
 
-                    order.product.amount += order.amount
+                    #order.product.amount += order.amount
+                    order.product.amount = F('amount') + order.amount
                     order.product.save()
                     order.delete()
                     logging.warning('deleted Order object')
