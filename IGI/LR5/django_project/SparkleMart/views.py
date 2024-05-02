@@ -57,7 +57,7 @@ def contacts(request):
 
 def vacancies(request):
     all_vacancies = Vacancy.objects.all()
-    logging.info(f'vacancies titles: {[vacancy.name for vacancy in all_vacancies]}')
+    logging.info(f'vacancies titles: {[vacancy.title for vacancy in all_vacancies]}')
     return render(request, 'vacancies.html', {'all_vacancies': all_vacancies})
 
 
@@ -371,7 +371,7 @@ class OrderDeleteDetailView(View):
 
     def post(self, request, *args, **kwargs):
         if request.user.is_authenticated and request.user.status == "customer" \
-                and Order.objects.filter(pk=self.kwargs.get("pk")).exists():
+                and Order.objects.filter(pk=self.kwargs.get("pk"), is_active=True).exists():
             form = OrderDeleteForm(request.POST)
 
             if form.is_valid():
