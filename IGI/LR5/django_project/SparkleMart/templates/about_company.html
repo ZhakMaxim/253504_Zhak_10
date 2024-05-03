@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>About company</title>
-</head>
-<body>
-    <h1>Info about company</h1>
+{% extends "base.html" %}
+{% block title %}Company info{% endblock title %}
+{% block header %}Company info{% endblock header %}
+
+{% block content %}
     <p>{{ company_info.text }}</p>
-</body>
-</html>
+{% endblock content %}

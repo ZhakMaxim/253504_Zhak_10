@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Vacancies</title>
-</head>
-<body>
-    <h1>Vacancies</h1>
+{% extends "base.html" %}
+{% block title %}Vacancies{% endblock title %}
+{% block header %}Vacancies{% endblock header %}
+
+{% block content %}
     {% for vacancy_item in all_vacancies %}
         <div>
             <h2>{{ vacancy_item.title }}</h2>
             <p>{{ vacancy_item.description }}</p>
         </div>
     {% endfor %}
-</body>
-</html>
+{% endblock content %}

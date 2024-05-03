@@ -1,19 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Contacts</title>
-</head>
-<body>
-    <h1>Contacts</h1>
-    {% for contact_item in all_contacts %}
-        <div>
-            <h2>{{ contact_item.name }}</h2>
-            <p>{{ contact_item.description }}</p>
-            <img src="{{ contact_item.photo.url }}" alt="{{ contact_item.name }}" height="500" width="500">
-            <p>Phone: {{ contact_item.user.phone_number }}</p>
-            <p>Email: {{ contact_item.user.email }}</p>
-        </div>
-    {% endfor %}
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}Contacts{% endblock title %}
+{% block header %}Contacts{% endblock header %}
+
+{% block content %}
+{% for contact_item in all_contacts %}
+    <div>
+        <h2>{{ contact_item.name }}</h2>
+        <p>{{ contact_item.description }}</p>
+        <img src="{{ contact_item.photo.url }}" alt="{{ contact_item.name }}" height="500" width="500">
+        <p>Phone: {{ contact_item.user.phone_number }}</p>
+        <p>Email: {{ contact_item.user.email }}</p>
+    </div>
+{% endfor %}
+{% endblock content %}

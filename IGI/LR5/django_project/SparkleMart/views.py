@@ -215,7 +215,8 @@ class ProductListView(ListView):
                 'producer_name': producer_name,
                 'producer_id': product.producer.id,
             })
-        return JsonResponse(products_data, safe=False)
+        return render(request, 'products.html', {'products': products})
+        #return JsonResponse(products_data, safe=False)
 
     @staticmethod
     def filter_products(min_price=None, max_price=None, prod_name=None, cat_name=None):
@@ -260,7 +261,8 @@ class ProductDetailView(DetailView):
                 'producer_name': product.producer.name,
                 'producer_id': product.producer.id,
             }
-            return JsonResponse(product_data)
+            return render(request, 'product.html', {'product': product})
+            #return JsonResponse(product_data)
         logging.warning('ProductDetailView: page not found')
         return render(request, 'page_not_found.html', status=404)
 
@@ -334,7 +336,8 @@ class OrderListView(View):
                         "date": timezone.localtime(order.date),
                         "is_active": order.is_active,
                     })
-                return JsonResponse(orders_data, safe=False)
+                return render(request, 'orders.html', {'orders': orders})
+                #return JsonResponse(orders_data, safe=False)
             except ObjectDoesNotExist:
                 logging.warning('OrderListView: page not found')
                 return render(request, 'page_not_found.html', status=404)
@@ -422,7 +425,8 @@ class UserOrderListView(View):
                         "date": timezone.localtime(order.date),
                         "is_active": order.is_active,
                     })
-                return JsonResponse(orders_data, safe=False)
+                return render(request, 'orders.html', {'orders': orders})
+                #return JsonResponse(orders_data, safe=False)
             else:
                 logging.warning('UserOrderListView: no orders')
                 return HttpResponse("There are no orders")

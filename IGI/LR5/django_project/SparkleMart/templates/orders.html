@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Orders{% endblock title %}
+{% block header %}Your orders{% endblock header %}
+
+{% block content %}
+{% for order in orders %}
+    <div>
+        <h2>number: {{ order.number }}</h2>
+        <p>price: ${{ order.price }}</p>
+        <p>promo: {{ order.promo }}</p>
+        <p>active :{{ order.is_active }}</p>
+        <p>amount :{{ order.amount }}</p>
+        <p>date :{{ order.date }}</p>
+        <a href="{% url 'order' pk=order.pk %}" class="button">details</a>
+    </div>
+{% endfor %}
+{% endblock content %}

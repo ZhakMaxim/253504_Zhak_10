@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Terms</title>
-</head>
-<body>
-    <h1>Terms</h1>
+{% extends "base.html" %}
+{% block title %}Terms{% endblock title %}
+{% block header %}Terms{% endblock header %}
+
+{% block content %}
     {% for term_item in all_terms %}
         <div>
             <h2>{{ term_item.question }}</h2>
@@ -13,5 +10,4 @@
             <p>{{ term_item.date_added }}</p>
         </div>
     {% endfor %}
-</body>
-</html>
+{% endblock content %}

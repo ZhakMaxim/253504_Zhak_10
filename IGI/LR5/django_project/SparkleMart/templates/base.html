@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Default title{% endblock title %}</title>
+</head>
+<body>
+
+    <a href="{%url 'register' %}">register</a>
+    <a href="{%url 'login' %}">login</a>
+    <a href="{%url 'logout' %}">logout</a>
+    <a href="{%url 'home' %}">home</a>
+    <a href="{%url 'about' %}">about</a>
+    <a href="{%url 'news' %}">news</a>
+    <a href="{%url 'terms' %}">terms</a>
+    <a href="{%url 'contacts' %}">contacts</a>
+    <a href="{%url 'vacancies' %}">vacancies</a>
+    <a href="{%url 'reviews' %}">reviews</a>
+    <a href="{%url 'privacy_policy' %}">privacy policy</a>
+    <a href="{%url 'products' %}">products</a>
+    <a href="{%url 'user_orders' pk=request.user.pk %}" class="button">orders</a>
+    <h1>{% block header %}{% endblock header %}</h1>
+    <div>{% block content%}{% endblock content %}</div>
+</body>
+</html>
